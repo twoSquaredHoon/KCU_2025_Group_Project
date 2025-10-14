@@ -20,7 +20,7 @@ public class Arrow : MonoBehaviour
 
     void Update()
     {
-        if (transform.position.x > 10)
+        if (transform.position.x > terminatePosition)
         {
             Destroy(gameObject);
         }

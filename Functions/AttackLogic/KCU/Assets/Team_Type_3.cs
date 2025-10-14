@@ -81,15 +81,14 @@ public class Team_Type_3 : Team
                 else
                 {
                     isAttacking = false;
+                    setCanMove(true);
                 }
             }
         }
         else
         {
-            if (!isAttacking)
-            {
-                setCanMove(true);
-            }
+            setCanMove(true);
+            
             //Debug.Log("No enemy on the list");
         }
     }
@@ -98,11 +97,16 @@ public class Team_Type_3 : Team
     {
         Instantiate(arrowPrefab, transform.position, Quaternion.identity);
     }
-    
+
     protected override void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log(name + ": TriggerEnter On!");
         Debug.Log(name + ": TriggerEnter Terminated");
+    }
+
+    protected override void OnTriggerExit2D(Collider2D other)
+    {
+        Debug.Log(name + ": TriggerExit On!");
     }
 
 }

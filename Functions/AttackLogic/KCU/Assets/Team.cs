@@ -10,6 +10,8 @@ public class Team : MonoBehaviour
     protected Rigidbody2D rb;
     protected SpriteRenderer spriteRenderer;
     protected Enemy opponent;
+
+    // Unit Stat (HP, 공격력, 등)
     [SerializeField] protected float hp;
     protected float attackPower;
     protected float moveSpeed;
@@ -76,6 +78,12 @@ public class Team : MonoBehaviour
     /* 
         Object 함수 
     */
+
+    /* 다른 Collider이랑 부딪혔을 때 Tag가 Enemy이면 Opponent List에 opponent를 추가함
+     * canMove를 false로 바꿈
+     * 
+     * @param other : 다른 유닛 collider (Team & Enemy 포함)
+     */
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log(name + ": TriggerEnter On!");
@@ -83,8 +91,8 @@ public class Team : MonoBehaviour
         {
             
         }*/
-        //bool isTeam = other.CompareTag(gameObject.tag);
 
+        //bool isTeam = other.CompareTag(gameObject.tag);
         bool isOpponent = other.CompareTag("Enemy");
         if (isOpponent)
         {
@@ -100,24 +108,38 @@ public class Team : MonoBehaviour
         Debug.Log(name + ": TriggerEnter Terminated");
     }
 
+    /* 부딪혔던 Collider이랑 더 이상 부딪힌 상태가 아니라면 발동 됨
+     * opponents 리스트가 비어있으면 움직이도록 설정
+     * 
+     * @param other : 다른 유닛 collider (Team & Enemy 포함)
+     */
     protected virtual void OnTriggerExit2D(Collider2D other)
     {
         Debug.Log(name + ": TriggerExit On!");
-        if (opponents.Count > 0)
+        bool isOpponent = other.CompareTag("Enemy");
+        if (isOpponent)
         {
-            opponent = opponents[0];
-            setCanMove(false);
+            if (opponents.Count > 0)
+            {
+                opponent = opponents[0];
+                setCanMove(false);
+            }
+            else
+            {
+                opponent = null;
+                setCanMove(true);
+            } 
         }
-        else
-        {
-            opponent = null;
-            setCanMove(true);
-        }
+        
     }
 
     /* 
         Helper 함수 
     */
+
+    /* opponents 리스트 가장 첫번째 유닛 (opponent)에게 attackPower만큼 대미지를 줌.
+     * 
+     */
     public virtual void attack()
     {
         if (opponent != null)
