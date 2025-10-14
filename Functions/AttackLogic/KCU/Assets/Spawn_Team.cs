@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Spawn_Team : MonoBehaviour
 {
-    public float energy;
+    [SerializeField] private float energy;
     private float energyRate;
+    private float maxEnergy;
     private float timer;
-
+    
 
     void Start()
     {
@@ -15,16 +16,20 @@ public class Spawn_Team : MonoBehaviour
         energy = 0;
         energyRate = 0.25f; //0.25초마다 energy가 1씩 추가
         timer = 0f;
+        maxEnergy = 100f;
     }
 
     void Update()
     {
-        if (timer >= 1f)
+        if(energy < maxEnergy)
         {
-            energy += 1f;
-            timer = 0f;
+            if (timer >= 1f)
+            {
+                energy += 1f;
+                timer = 0f;
+            }
+            timer += Time.deltaTime * (1 / energyRate);
         }
-        timer += Time.deltaTime * (1 / energyRate);
     }
 
     public void SpawnTeam(Team team)
@@ -37,8 +42,14 @@ public class Spawn_Team : MonoBehaviour
         return energy;
     }
 
+    public float getMaxEnergy()
+    {
+        return maxEnergy;
+    }
+
     public void reduceEnergy(float num)
     {
         energy -= num;
     }
+
 }
