@@ -6,12 +6,10 @@ using UnityEngine;
 public class Button : MonoBehaviour
 {
     public Spawn_Team spawner;
-
-    
-    protected bool canClick;
     protected SpriteRenderer sr;
-    protected float energyRequired;
     public Team team;
+    protected bool canClick;
+    protected float energyRequired;
 
     protected virtual void Awake()
     {
