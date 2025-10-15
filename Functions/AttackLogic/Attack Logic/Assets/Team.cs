@@ -79,6 +79,8 @@ public class Team : MonoBehaviour
         Object 함수 
     */
 
+    
+
     /* 다른 Collider이랑 부딪혔을 때 Tag가 Enemy이면 Opponent List에 opponent를 추가함
      * canMove를 false로 바꿈
      * 
@@ -86,13 +88,6 @@ public class Team : MonoBehaviour
      */
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(name + ": TriggerEnter On!");
-        /*if (canMove || (!canMove && opponents.Count > 0))
-        {
-            
-        }*/
-
-        //bool isTeam = other.CompareTag(gameObject.tag);
         bool isOpponent = other.CompareTag("Enemy");
         if (isOpponent)
         {
@@ -104,8 +99,6 @@ public class Team : MonoBehaviour
                 opponent = opponents[0];
             }
         }
-
-        Debug.Log(name + ": TriggerEnter Terminated");
     }
 
     /* 부딪혔던 Collider이랑 더 이상 부딪힌 상태가 아니라면 발동 됨

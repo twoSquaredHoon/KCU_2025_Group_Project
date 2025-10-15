@@ -10,11 +10,13 @@ public class Enemy : MonoBehaviour
     protected Rigidbody2D rb;
     protected SpriteRenderer spriteRenderer;
     protected Team opponent;
+
+    // Unit Stat (HP, 공격력, 등)
     [SerializeField] protected float hp;
     protected float attackPower;
     protected float moveSpeed;
     protected float attackSpeed;
-    protected float attackTimer; 
+    protected float attackTimer;
     [SerializeField] protected bool canMove;
     protected float stopDistance;
     protected Transform targetToStop;
@@ -39,7 +41,7 @@ public class Enemy : MonoBehaviour
             rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
         }
 
-        float y_random_position = -0.7f * (Random.value * 1 -0.5f);
+        float y_random_position = -0.7f * (Random.value * 1 - 0.5f);
         transform.position = new Vector3(9.5f, y_random_position, -0.13f);
     }
 
@@ -62,68 +64,92 @@ public class Enemy : MonoBehaviour
 
         if (canMove)
         {
-            moveEntity();
+            if (opponents.Count == 0)
+            {
+                moveEntity();
+            }
         }
         else
         {
-            //attack -> method 따로 빼기?
-            if (opponent != null)
-            {
-                attackTimer += Time.deltaTime;
-                if (attackTimer >= attackSpeed)
-                {
-                    opponent.getDamage(attackPower);
-                    attackTimer = 0f;
-                }
-            }
-            if (opponents[0] == null)
-            {
-                opponents.RemoveAt(0);
-                setCanMove(true);
-            }
+            attack();
         }
     }
 
     /* 
         Object 함수 
     */
+
+    
+
+    /* 다른 Collider이랑 부딪혔을 때 Tag가 Enemy이면 Opponent List에 opponent를 추가함
+     * canMove를 false로 바꿈
+     * 
+     * @param other : 다른 유닛 collider (Team & Enemy 포함)
+     */
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Collision!");
-        if (canMove)
+        bool isOpponent = other.CompareTag("Team");
+        if (isOpponent)
         {
-            //bool isTeam = other.CompareTag(gameObject.tag);
-            bool isOpponent = other.CompareTag("Team");
-            if (isOpponent)
+            Team enemy = other.GetComponent<Team>();
+            if (enemy != null && !opponents.Contains(enemy))
             {
-                Team enemy = other.GetComponent<Team>();
-                if (enemy != null && !opponents.Contains(enemy))
-                {
-                    opponents.Add(enemy);
-                    setCanMove(false);
-                    opponent = opponents[0];
-                }
+                opponents.Add(enemy);
+                setCanMove(false);
+                opponent = opponents[0];
             }
         }
     }
 
+    /* 부딪혔던 Collider이랑 더 이상 부딪힌 상태가 아니라면 발동 됨
+     * opponents 리스트가 비어있으면 움직이도록 설정
+     * 
+     * @param other : 다른 유닛 collider (Team & Enemy 포함)
+     */
     protected virtual void OnTriggerExit2D(Collider2D other)
     {
-        if (opponents.Count > 0)
+        Debug.Log(name + ": TriggerExit On!");
+        bool isOpponent = other.CompareTag("Team");
+        if (isOpponent)
         {
-            opponent = opponents[0];
-            setCanMove(false);
+            if (opponents.Count > 0)
+            {
+                opponent = opponents[0];
+                setCanMove(false);
+            }
+            else
+            {
+                opponent = null;
+                setCanMove(true);
+            } 
         }
-        else
-        {
-            opponent = null;
-            setCanMove(true);
-        }
+        
     }
 
     /* 
         Helper 함수 
     */
+
+    /* opponents 리스트 가장 첫번째 유닛 (opponent)에게 attackPower만큼 대미지를 줌.
+     * 
+     */
+    public virtual void attack()
+    {
+        if (opponent != null)
+        {
+            attackTimer += Time.deltaTime;
+            if (attackTimer >= attackSpeed)
+            {
+                opponent.getDamage(attackPower);
+                attackTimer = 0f;
+            }
+        }
+        if (opponents[0] == null)
+        {
+            opponents.RemoveAt(0);
+            setCanMove(true);
+        }
+    }
 
     public virtual void setCanMove(bool val)
     {
@@ -133,12 +159,13 @@ public class Enemy : MonoBehaviour
     public virtual void getDamage(float num)
     {
         hp -= num;
-        //Debug.Log(spriteRenderer.sprite.name + " received " + num + " damage.");
+        Debug.Log(spriteRenderer.sprite.name + " received " + num + " damage.");
     }
 
     protected virtual void moveEntity()
     {
         transform.position += Vector3.left * moveSpeed * Time.deltaTime;
+        /* 이동하는 애니메이션 추가 */
     }
 
     protected virtual void animateAndDestroy()
@@ -152,5 +179,7 @@ public class Enemy : MonoBehaviour
     {
         return !canMove;
     }
+
+    
 
 }

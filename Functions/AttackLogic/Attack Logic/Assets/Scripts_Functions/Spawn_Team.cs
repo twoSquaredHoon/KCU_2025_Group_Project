@@ -13,7 +13,7 @@ public class Spawn_Team : MonoBehaviour
     void Start()
     {
         transform.position = new Vector3(-9.5f, -0.7f, -0.13f);
-        energy = 0;
+        energy = 0f;
         energyRate = 0.25f; //0.25초마다 energy가 1씩 추가
         timer = 0f;
         maxEnergy = 100f;

@@ -12,7 +12,7 @@ public class Arrow : MonoBehaviour
     void Start()
     {
         damage = 10;
-        moveSpeed = 3f;
+        moveSpeed = 10f;
         attackRange = 4f;
         terminatePosition = transform.position.x + attackRange;
     }
