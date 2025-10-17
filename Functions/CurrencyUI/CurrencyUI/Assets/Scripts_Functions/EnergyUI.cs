@@ -10,7 +10,6 @@ public class EnergyUI : MonoBehaviour
 
     private void Start()
     {
-        // 자동으로 Spawn_Team 오브젝트를 찾아 연결 (직접 연결해도 됨)
         if (spawner == null)
             spawner = FindObjectOfType<Spawn_Team>();
     }
