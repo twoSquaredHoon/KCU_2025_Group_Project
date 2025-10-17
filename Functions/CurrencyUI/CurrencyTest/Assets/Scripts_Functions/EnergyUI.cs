@@ -4,27 +4,33 @@ using TMPro;
 
 public class EnergyUI : MonoBehaviour
 {
-    [SerializeField] private Spawn_Team spawner;   // energy 데이터를 가져올 스크립트
-    [SerializeField] private Image energyBar;      // 에너지 바
-    [SerializeField] private TMP_Text energyText;  // 텍스트 표시
+    [SerializeField] private Spawn_Team spawner;   
+    [SerializeField] private Image energyBar;      
+    [SerializeField] private TMP_Text energyText;  
+
+    private float currentFill = 0f; // 화면에 표시되는 fill 상태
 
     private void Start()
     {
         if (spawner == null)
-            spawner = FindObjectOfType<Spawn_Team>(); // 자동 연결
+            spawner = FindObjectOfType<Spawn_Team>();
     }
 
     private void Update()
     {
         if (spawner == null || energyBar == null || energyText == null) return;
 
-        float current = spawner.getEnergy();
-        float max = spawner.getMaxEnergy();
+        float currentEnergy = spawner.getEnergy();
+        float maxEnergy = spawner.getMaxEnergy();
 
-        // 바 채우기
-        energyBar.fillAmount = current / max;
+        // 에너지 비율 계산
+        float targetFill = currentEnergy / maxEnergy;
 
-        // 텍스트 업데이트
-        energyText.text = $"⚡ {Mathf.FloorToInt(current)} / {Mathf.FloorToInt(max)}";
+        // fillAmount를 부드럽게 보간 (줄거나 늘어날 때 자연스럽게)
+        currentFill = Mathf.Lerp(currentFill, targetFill, Time.deltaTime * 8f);
+        energyBar.fillAmount = currentFill;
+
+        // 텍스트 표시
+        energyText.text = $"⚡ {Mathf.FloorToInt(currentEnergy)} / {Mathf.FloorToInt(maxEnergy)}";
     }
 }
