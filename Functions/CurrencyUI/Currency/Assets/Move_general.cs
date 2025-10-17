@@ -2,17 +2,16 @@ using UnityEngine;
 
 public class Move_general : MonoBehaviour
 {
-    public float speed = 5f;        // movement speed
-    public float rightLimit = 12f;  // when to disappear
+    public float speed = 5f;
+    public float rightLimit = 12f;
     private bool isMoving = false;
+    public int spawnCost = 10; // cost to spawn
 
     void Update()
     {
         if (isMoving)
         {
             transform.Translate(Vector3.right * speed * Time.deltaTime);
-
-            // When character goes off-screen right, deactivate
             if (transform.position.x > rightLimit)
             {
                 gameObject.SetActive(false);
@@ -23,9 +22,16 @@ public class Move_general : MonoBehaviour
 
     public void StartMoving()
     {
-        // reset to left start position
-        transform.position = new Vector3(-10f, -1f, 0f);
-        gameObject.SetActive(true);
-        isMoving = true;
+        // Spend 10 coins before spawning
+        if (CurrencyManager.instance.SpendCoins(spawnCost))
+        {
+            transform.position = new Vector3(-10f, -2.5f, 0f);
+            gameObject.SetActive(true);
+            isMoving = true;
+        }
+        else
+        {
+            Debug.Log("Not enough coins!");
+        }
     }
 }
