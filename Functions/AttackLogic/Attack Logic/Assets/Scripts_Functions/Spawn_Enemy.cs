@@ -1,50 +1,74 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Spawn_Enemy : MonoBehaviour
 {
-    //각 Enemy type마다 타이머를 따로 둬서 다 따로 스폰하는 것도 나쁘진 않음. <- 작업해야함.
     protected GameObject enemy;
-    public Enemy_Type_1 enemy_1;
-    public Enemy_Type_2 enemy_2;
-    [SerializeField] protected float spawnRate_type_1;
-    [SerializeField] protected float spawnRate_type_2;
+    public Enemy_Type_1 enemy1;
+    public Enemy_Type_2 enemy2;
+    public Enemy_Type_3 enemy3;
+    [SerializeField] protected float stage;
+    [SerializeField] protected float stageAcc;
+    [SerializeField] protected float spawnrate1;
+    [SerializeField] protected float spawnrate2;
+    [SerializeField] protected float spawnrate3;
 
-    [SerializeField] protected float timer_Type1;
-    [SerializeField] protected float timer_Type2;
+    [SerializeField] protected float timer1;
+    [SerializeField] protected float timer2;
+    [SerializeField] protected float timer3;
+
     [SerializeField] protected float actualTime;
     void Start()
     {
         transform.position = new Vector3(9.5f, -0.7f, -0.13f);
-        spawnRate_type_1 = 13f;
-        spawnRate_type_2 = 24f;
-        timer_Type1 = 0;
-        timer_Type2 = 0;
+        stage = 0;
+        stageAcc = 0.2f; //처음보다 (0.2)면 20%씩 빨라짐
+        spawnrate1 = 5f;
+        spawnrate2 = 9f;
+        spawnrate3 = 15f;
+        timer1 = 0;
+        timer2 = 0;
+        timer3 = 0;
         actualTime = 0;
     }
 
     void Update()
     {
-        if (timer_Type1 > spawnRate_type_1)
+
+        if (timer1 > spawnrate1)
         {
-            timer_Type1 = 0;
-            Instantiate(enemy_1);
+            timer1 = 0;
+            Instantiate(enemy1);
 
         }
         else
         {
-            timer_Type1 = timer_Type1 + Time.deltaTime * (Random.value * 3);
+            timer1 = timer1 + Time.deltaTime * stage;
         }
 
-        if (timer_Type2 > spawnRate_type_2)
+        if (timer2 > spawnrate2)
         {
-            timer_Type2 = 0;
-            Instantiate(enemy_2);
+            timer2 = 0;
+            Instantiate(enemy2);
         }
         else
         {
-            timer_Type2 = timer_Type2 + Time.deltaTime * (Random.value * 3);
+            timer2 = timer2 + Time.deltaTime * stage;
         }
+
+        if (timer3 > spawnrate3)
+        {
+            timer3 = 0;
+            Instantiate(enemy3);
+        }
+        else
+        {
+            timer3 = timer3 + Time.deltaTime * stage;
+        }
+
+        stage = 1 + stageAcc * Mathf.Floor(actualTime / 30f); //30초마다 stageAcc 만큼 빨라짐
+        actualTime = actualTime + Time.deltaTime;
     }
 }

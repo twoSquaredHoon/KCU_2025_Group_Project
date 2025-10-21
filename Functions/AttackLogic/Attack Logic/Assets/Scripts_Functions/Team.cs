@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEngine;
 using Random=UnityEngine.Random;
@@ -24,6 +25,7 @@ public class Team : MonoBehaviour
 
     protected virtual void Start()
     {
+        EntityManager.Register(this);
         spriteRenderer = GetComponent<SpriteRenderer>();
         hp = 100f;
         attackPower = 20f;
@@ -150,6 +152,7 @@ public class Team : MonoBehaviour
             setCanMove(true);
         }
     }
+    
 
     public virtual void setCanMove(bool val)
     {
@@ -171,7 +174,7 @@ public class Team : MonoBehaviour
     protected virtual void animateAndDestroy()
     {
         /* 사망 애니메이션 추가 */
-
+        EntityManager.addDeadListTeam(this.name);
         Destroy(gameObject);
     }
 

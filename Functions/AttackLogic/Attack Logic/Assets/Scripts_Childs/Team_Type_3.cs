@@ -26,6 +26,7 @@ public class Team_Type_3 : Team
         checkSpeed = 0.1f;
         arrowPrefab.setDamage(attackPower);
         arrowPrefab.setAttackRange(attackRange);
+
     }
 
     protected override void Update()
@@ -52,22 +53,19 @@ public class Team_Type_3 : Team
         checkTimer += Time.deltaTime;
         if (checkTimer >= checkSpeed)
         {
-            checkForEnemy();
+            updateEnemy();
             checkTimer = 0f;
         }
     }
 
-    protected virtual void checkForEnemy()
+    protected virtual void updateEnemy()
     {
         enemies = new List<GameObject>(GameObject.FindGameObjectsWithTag("Enemy"));
+        //getEnemyList();를 활용해서 하는게 더 깔끔할 것 같음. -> 시간 남으면
 
-        // 리스트가 비어있지 않다면
         if (enemies.Count > 0)
         {
-            // null 객체 제거 (혹시 삭제된 적이 남아있을 수 있음)
             enemies.RemoveAll(e => e == null);
-
-            // 가까운 순서대로 정렬
             enemies.Sort((a, b) =>
             {
                 float distA = Vector3.Distance(transform.position, a.transform.position);
@@ -75,7 +73,6 @@ public class Team_Type_3 : Team
                 return distA.CompareTo(distB);
             });
 
-            // 가장 가까운 적 선택
             enemy = enemies[0];
 
             float distance = Vector3.Distance(transform.position, enemy.transform.position);

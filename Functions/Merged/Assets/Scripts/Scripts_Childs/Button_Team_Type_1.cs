@@ -20,11 +20,10 @@ public class Button_Team_Type_1 : Button
 
         if (spawner != null)
         {
-            Debug.Log("Team Type 1 Spawnder Called!");
+            Debug.Log("Team Type 1 Spawner Called!");
             spawner.SpawnTeam(type1);
             //changeColor();
             spawner.reduceEnergy(energyRequired);
         }
     }
-
 }

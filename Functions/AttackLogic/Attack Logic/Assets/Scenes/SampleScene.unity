@@ -551,6 +551,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1357478300
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1357478302}
+  - component: {fileID: 1357478303}
+  m_Layer: 0
+  m_Name: EntityManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1357478302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357478300}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.21410856, y: -0.5432806, z: 0.008303611}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1357478303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357478300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 143f0ef8be538462ba929117641f2892, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1520911466
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,12 +624,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699ff9946f70743088240cf80a909bb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy_1: {fileID: 4301569283310837278, guid: c1fb4ce9e8ff94364be9a7aa05fbf335, type: 3}
-  enemy_2: {fileID: -2201544599394878425, guid: 9b88415df3db044078061d7b5f6bb16f, type: 3}
-  spawnRate_type_1: 0
-  spawnRate_type_2: 0
-  timer_Type1: 0
-  timer_Type2: 0
+  enemy1: {fileID: 4301569283310837278, guid: c1fb4ce9e8ff94364be9a7aa05fbf335, type: 3}
+  enemy2: {fileID: -2201544599394878425, guid: 9b88415df3db044078061d7b5f6bb16f, type: 3}
+  enemy3: {fileID: 4906785263100234517, guid: 5639af1b4c1c24fd1b600d3d2afc6e97, type: 3}
+  stage: 0
+  stageAcc: 0
+  spawnrate1: 0
+  spawnrate2: 0
+  spawnrate3: 0
+  timer1: 0
+  timer2: 0
+  timer3: 0
   actualTime: 0
 --- !u!4 &1520911468
 Transform:
@@ -758,3 +807,4 @@ SceneRoots:
   - {fileID: 657025132}
   - {fileID: 1576397406}
   - {fileID: 1122626945}
+  - {fileID: 1357478302}
