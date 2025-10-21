@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Button : MonoBehaviour
+public class originalButton : MonoBehaviour
 {
     public Spawn_Team spawner;
     protected SpriteRenderer sr;

@@ -3,24 +3,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Button_Team_Type_1 : Button
+public class Button_Enemy_Type_1 : TeamButton
 {
     public Team_Type_1 type1;
     protected override void Start()
     {
         base.Start();
-        transform.position = new Vector3(-7.50f, -3.43f, 0f);
+        k = KeyCode.Alpha1;
         energyRequired = 20f;
     }
 
-    protected override void OnMouseDown()
+    protected override void callSpawn()
     {
-        Debug.Log("Button Clicked!");
         if (!canClick) return;
 
         if (spawner != null)
         {
-            Debug.Log("Team Type 1 Spawnder Called!");
             spawner.SpawnTeam(type1);
             //changeColor();
             spawner.reduceEnergy(energyRequired);
