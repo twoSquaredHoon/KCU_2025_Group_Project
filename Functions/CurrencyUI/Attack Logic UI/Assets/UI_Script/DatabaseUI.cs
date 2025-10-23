@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class DatabaseUI : MonoBehaviour
 {
     [Header("UI References")]
-    [SerializeField] private GameObject panel; // DatabasePanel
+    [SerializeField] private GameObject panel; 
     [SerializeField] private TMP_Text summaryText;
     [SerializeField] private Image DatabaseImage;
 
