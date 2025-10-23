@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Attack Logic.sln"
+    "dotnet.defaultSolution": "Attack Logic UI.sln"
 }
