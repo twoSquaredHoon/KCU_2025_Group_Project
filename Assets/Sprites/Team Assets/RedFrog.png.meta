@@ -1,0 +1,793 @@
+fileFormatVersion: 2
+guid: ccc36934b1c2c447c8c12628a5d7b182
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7723282791261588335
+    second: RedFrog_0
+  - first:
+      213: -5529910452813202433
+    second: RedFrog_1
+  - first:
+      213: -2291602885254218424
+    second: RedFrog_2
+  - first:
+      213: 833475111828280176
+    second: RedFrog_3
+  - first:
+      213: -4058554260617671963
+    second: RedFrog_4
+  - first:
+      213: -6781754573664708089
+    second: RedFrog_5
+  - first:
+      213: -3447842332557889482
+    second: RedFrog_6
+  - first:
+      213: -6406299518198734528
+    second: RedFrog_7
+  - first:
+      213: 6813603488190390541
+    second: RedFrog_8
+  - first:
+      213: 6291493985200157943
+    second: RedFrog_9
+  - first:
+      213: 5402150116952765156
+    second: RedFrog_10
+  - first:
+      213: 543789242336490895
+    second: RedFrog_11
+  - first:
+      213: 4536317130662623668
+    second: RedFrog_12
+  - first:
+      213: 767933332533608700
+    second: RedFrog_13
+  - first:
+      213: -391474423185863707
+    second: RedFrog_14
+  - first:
+      213: -5140629329121647829
+    second: RedFrog_15
+  - first:
+      213: -991995383994351277
+    second: RedFrog_16
+  - first:
+      213: 2952423978893203027
+    second: RedFrog_17
+  - first:
+      213: 7702293173361416030
+    second: RedFrog_18
+  - first:
+      213: 338164600922668736
+    second: RedFrog_19
+  - first:
+      213: 8821932133782575898
+    second: RedFrog_20
+  - first:
+      213: 4006236460716736618
+    second: RedFrog_21
+  - first:
+      213: -8525249941122174766
+    second: RedFrog_22
+  - first:
+      213: -7750043943491143018
+    second: RedFrog_23
+  - first:
+      213: 2934097616499136765
+    second: RedFrog_24
+  - first:
+      213: 8740912482342208726
+    second: RedFrog_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RedFrog_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 127
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19437f6983361d490800000000000000
+      internalID: -7723282791261588335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFrog_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 127
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffb795cedbfc143b0800000000000000
+      internalID: -5529910452813202433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFrog_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 127
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84d792a31579230e0800000000000000
+      internalID: -2291602885254218424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFrog_3
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 127
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07357a1c239119b00800000000000000
+      internalID: 833475111828280176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFrog_4
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 95
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ea4c32376e1da7c0800000000000000
+      internalID: -4058554260617671963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFrog_5
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 95
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70a95d2852e52e1a0800000000000000
+      internalID: -6781754573664708089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFrog_6
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 95
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 630355e7aadc620d0800000000000000
+      internalID: -3447842332557889482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFrog_7
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 95
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 041220db7804817a0800000000000000
+      internalID: -6406299518198734528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFrog_8
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 63
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0163f1c548ce8e50800000000000000
+      internalID: 6813603488190390541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFrog_9
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 63
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f4bc5e1270ef4750800000000000000
+      internalID: 6291493985200157943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFrog_10
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 63
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e2fd48d8ea48fa40800000000000000
+      internalID: 5402150116952765156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFrog_11
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 65
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f85352e4f6deb8700800000000000000
+      internalID: 543789242336490895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFrog_12
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 65
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b93aa9556c34fe30800000000000000
+      internalID: 4536317130662623668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFrog_13
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 63
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf009d81c4f38aa00800000000000000
+      internalID: 767933332533608700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFrog_14
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 31
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eb0b531614319af0800000000000000
+      internalID: -391474423185863707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFrog_15
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 31
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b23efb38cd0d8a8b0800000000000000
+      internalID: -5140629329121647829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFrog_16
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 31
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 351803e3479bb32f0800000000000000
+      internalID: -991995383994351277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFrog_17
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 31
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 356564857fd19f820800000000000000
+      internalID: 2952423978893203027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFrog_18
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 31
+        width: 26
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e579f1a25da04ea60800000000000000
+      internalID: 7702293173361416030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFrog_19
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 31
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ce7b91b9e661b400800000000000000
+      internalID: 338164600922668736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFrog_20
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 0
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1bd6baf88ccd6a70800000000000000
+      internalID: 8821932133782575898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFrog_21
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 3
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a604d37c5d2099730800000000000000
+      internalID: 4006236460716736618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFrog_22
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d03ef5e85a30b980800000000000000
+      internalID: -8525249941122174766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFrog_23
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 0
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69afa8a4810527490800000000000000
+      internalID: -7750043943491143018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFrog_24
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 0
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df850c79c3208b820800000000000000
+      internalID: 2934097616499136765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFrog_25
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d409c26795fd4970800000000000000
+      internalID: 8740912482342208726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      RedFrog_0: -7723282791261588335
+      RedFrog_1: -5529910452813202433
+      RedFrog_10: 5402150116952765156
+      RedFrog_11: 543789242336490895
+      RedFrog_12: 4536317130662623668
+      RedFrog_13: 767933332533608700
+      RedFrog_14: -391474423185863707
+      RedFrog_15: -5140629329121647829
+      RedFrog_16: -991995383994351277
+      RedFrog_17: 2952423978893203027
+      RedFrog_18: 7702293173361416030
+      RedFrog_19: 338164600922668736
+      RedFrog_2: -2291602885254218424
+      RedFrog_20: 8821932133782575898
+      RedFrog_21: 4006236460716736618
+      RedFrog_22: -8525249941122174766
+      RedFrog_23: -7750043943491143018
+      RedFrog_24: 2934097616499136765
+      RedFrog_25: 8740912482342208726
+      RedFrog_3: 833475111828280176
+      RedFrog_4: -4058554260617671963
+      RedFrog_5: -6781754573664708089
+      RedFrog_6: -3447842332557889482
+      RedFrog_7: -6406299518198734528
+      RedFrog_8: 6813603488190390541
+      RedFrog_9: 6291493985200157943
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

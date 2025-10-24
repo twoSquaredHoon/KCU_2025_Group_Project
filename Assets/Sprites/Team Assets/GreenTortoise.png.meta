@@ -1,0 +1,793 @@
+fileFormatVersion: 2
+guid: 3e7c79135cb7c4de799d18d626dbe82d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 614455586148752583
+    second: GreenTortoise_0
+  - first:
+      213: -1370695068493713276
+    second: GreenTortoise_1
+  - first:
+      213: -5127892439050511947
+    second: GreenTortoise_2
+  - first:
+      213: 2378696646342408331
+    second: GreenTortoise_3
+  - first:
+      213: -6770236199014929775
+    second: GreenTortoise_4
+  - first:
+      213: -8156262554584106043
+    second: GreenTortoise_5
+  - first:
+      213: 5777289216087489487
+    second: GreenTortoise_6
+  - first:
+      213: 2143721711393776766
+    second: GreenTortoise_7
+  - first:
+      213: -2474524119169031172
+    second: GreenTortoise_8
+  - first:
+      213: 1626163488055324162
+    second: GreenTortoise_9
+  - first:
+      213: 6615280893678677188
+    second: GreenTortoise_10
+  - first:
+      213: -6960252608302581308
+    second: GreenTortoise_11
+  - first:
+      213: -6549120545606943643
+    second: GreenTortoise_12
+  - first:
+      213: -9040696094838041830
+    second: GreenTortoise_13
+  - first:
+      213: -6760532698700039067
+    second: GreenTortoise_14
+  - first:
+      213: -2570929249697159642
+    second: GreenTortoise_15
+  - first:
+      213: 7843136023864627229
+    second: GreenTortoise_16
+  - first:
+      213: -9057475114468200344
+    second: GreenTortoise_17
+  - first:
+      213: -205827310294935202
+    second: GreenTortoise_18
+  - first:
+      213: 5723572042786285003
+    second: GreenTortoise_19
+  - first:
+      213: -7653964136429708540
+    second: GreenTortoise_20
+  - first:
+      213: 5926363227508051375
+    second: GreenTortoise_21
+  - first:
+      213: 4468039180018008744
+    second: GreenTortoise_22
+  - first:
+      213: -4319362826279788615
+    second: GreenTortoise_23
+  - first:
+      213: 7251422184892967883
+    second: GreenTortoise_24
+  - first:
+      213: 4972821293283745376
+    second: GreenTortoise_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GreenTortoise_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 127
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cc96ae991cf68800800000000000000
+      internalID: 614455586148752583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenTortoise_1
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 127
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4807d03f8105afce0800000000000000
+      internalID: -1370695068493713276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenTortoise_2
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 127
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b99bf3def016d8b0800000000000000
+      internalID: -5127892439050511947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenTortoise_3
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 127
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b88f6a93ff3d20120800000000000000
+      internalID: 2378696646342408331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenTortoise_4
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 95
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19a69381c0a4b02a0800000000000000
+      internalID: -6770236199014929775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenTortoise_5
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 95
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cbb13b9b622fce80800000000000000
+      internalID: -8156262554584106043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenTortoise_6
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 95
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcbf691ceed0d2050800000000000000
+      internalID: 5777289216087489487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenTortoise_7
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 95
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e742be0e98700cd10800000000000000
+      internalID: 2143721711393776766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenTortoise_8
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 63
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf32bc89c69b8add0800000000000000
+      internalID: -2474524119169031172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenTortoise_9
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 63
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20e6f3c931b419610800000000000000
+      internalID: 1626163488055324162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenTortoise_10
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 63
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cc652d6ce23ecb50800000000000000
+      internalID: 6615280893678677188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenTortoise_11
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 63
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c973273127386f90800000000000000
+      internalID: -6960252608302581308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenTortoise_12
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 63
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56cb2efff89dc15a0800000000000000
+      internalID: -6549120545606943643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenTortoise_13
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 63
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a13dae82dcef88280800000000000000
+      internalID: -9040696094838041830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenTortoise_14
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 31
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56c32915453cd22a0800000000000000
+      internalID: -6760532698700039067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenTortoise_15
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 31
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 626a3210879325cd0800000000000000
+      internalID: -2570929249697159642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenTortoise_16
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 31
+        width: 21
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d105583b8aa68dc60800000000000000
+      internalID: 7843136023864627229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenTortoise_17
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 31
+        width: 26
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 860be283f526d4280800000000000000
+      internalID: -9057475114468200344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenTortoise_18
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 31
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e59dbccd621c42df0800000000000000
+      internalID: -205827310294935202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenTortoise_19
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 31
+        width: 26
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc522a8b2763e6f40800000000000000
+      internalID: 5723572042786285003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenTortoise_20
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 0
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40b178c9b28a7c590800000000000000
+      internalID: -7653964136429708540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenTortoise_21
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 0
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fad0e89c4fbae3250800000000000000
+      internalID: 5926363227508051375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenTortoise_22
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 0
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a2408726f9a10e30800000000000000
+      internalID: 4468039180018008744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenTortoise_23
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bfd09bf46a8e04c0800000000000000
+      internalID: -4319362826279788615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenTortoise_24
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 0
+        width: 23
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcbaee6be0a32a460800000000000000
+      internalID: 7251422184892967883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenTortoise_25
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 0
+        width: 23
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06e1dad7e92030540800000000000000
+      internalID: 4972821293283745376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      GreenTortoise_0: 614455586148752583
+      GreenTortoise_1: -1370695068493713276
+      GreenTortoise_10: 6615280893678677188
+      GreenTortoise_11: -6960252608302581308
+      GreenTortoise_12: -6549120545606943643
+      GreenTortoise_13: -9040696094838041830
+      GreenTortoise_14: -6760532698700039067
+      GreenTortoise_15: -2570929249697159642
+      GreenTortoise_16: 7843136023864627229
+      GreenTortoise_17: -9057475114468200344
+      GreenTortoise_18: -205827310294935202
+      GreenTortoise_19: 5723572042786285003
+      GreenTortoise_2: -5127892439050511947
+      GreenTortoise_20: -7653964136429708540
+      GreenTortoise_21: 5926363227508051375
+      GreenTortoise_22: 4468039180018008744
+      GreenTortoise_23: -4319362826279788615
+      GreenTortoise_24: 7251422184892967883
+      GreenTortoise_25: 4972821293283745376
+      GreenTortoise_3: 2378696646342408331
+      GreenTortoise_4: -6770236199014929775
+      GreenTortoise_5: -8156262554584106043
+      GreenTortoise_6: 5777289216087489487
+      GreenTortoise_7: 2143721711393776766
+      GreenTortoise_8: -2474524119169031172
+      GreenTortoise_9: 1626163488055324162
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
