@@ -13,13 +13,16 @@ public class Team_Type_3 : Team
     protected float checkSpeed;
     [SerializeField] protected GameObject enemy;
     [SerializeField] protected List<GameObject> enemies;
+
+    public Animator anim;
+
     protected override void Start()
     {
         base.Start();
         hp = 80f;
         attackPower = 13f;
-        attackSpeed = 1f;
-        moveSpeed = 0.8f;
+        attackSpeed = 0.1f;
+        moveSpeed = 4f;
         attackRange = 4f;
         isAttacking = false;
         checkTimer = 0f;
@@ -111,6 +114,11 @@ public class Team_Type_3 : Team
     protected override void OnTriggerExit2D(Collider2D other)
     {
         Debug.Log(name + ": TriggerExit On!");
+    }
+
+    void LateUpdate()
+    {
+        anim.SetBool("isMoving", canMove);
     }
 
 }
