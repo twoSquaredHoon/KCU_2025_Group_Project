@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy_Type_3 : Enemy
 {
+
+    public Animator anim;
     protected override void Start()
     {
         base.Start();

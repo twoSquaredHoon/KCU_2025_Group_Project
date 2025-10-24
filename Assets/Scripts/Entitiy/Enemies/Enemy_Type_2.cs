@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy_Type_2 : Enemy
 {
+    public Animator anim;
     protected override void Start()
     {
         base.Start();
@@ -11,6 +12,11 @@ public class Enemy_Type_2 : Enemy
         attackPower = 13f;
         attackSpeed = 0.2f;
         moveSpeed = 0.6f;
+    }
+
+    void LateUpdate()
+    {
+        anim.SetBool("isMoving", canMove);
     }
 
 }
