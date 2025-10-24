@@ -44,12 +44,12 @@ public class Enemy : MonoBehaviour
         }
 
         float y_random_position = -0.7f * (Random.value * 1 - 0.5f);
-        transform.position = new Vector3(9.5f, y_random_position, -0.13f);
+        transform.position = new Vector3(19f, y_random_position, -0.13f);
     }
 
     protected virtual void Update()
     {
-        if (hp <= 0 || transform.position.x > 15)
+        if (hp <= 0 || transform.position.x < -18)
         {
             animateAndDestroy();
         }
@@ -174,6 +174,7 @@ public class Enemy : MonoBehaviour
     protected virtual void animateAndDestroy()
     {
         /* 사망 애니메이션 추가 */
+        EntityManager.Unregister(this);
         EntityManager.addDeadListEnemy(this.name);
         Destroy(gameObject);
     }
