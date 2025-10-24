@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Button_Enemy_Type_1 : TeamButton
+public class Button_Team_Type_1 : TeamButton
 {
     public Team_Type_1 type1;
     protected override void Start()
