@@ -115,7 +115,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -152,7 +152,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -181,10 +181,10 @@ TextureImporter:
       name: YellowDuck_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 127
-        width: 17
-        height: 19
+        x: 0
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,10 +203,10 @@ TextureImporter:
       name: YellowDuck_1
       rect:
         serializedVersion: 2
-        x: 38
-        y: 127
-        width: 17
-        height: 19
+        x: 32
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,10 +225,10 @@ TextureImporter:
       name: YellowDuck_2
       rect:
         serializedVersion: 2
-        x: 70
-        y: 127
-        width: 17
-        height: 18
+        x: 64
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,10 +247,10 @@ TextureImporter:
       name: YellowDuck_3
       rect:
         serializedVersion: 2
-        x: 102
-        y: 127
-        width: 17
-        height: 18
+        x: 96
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -269,10 +269,10 @@ TextureImporter:
       name: YellowDuck_4
       rect:
         serializedVersion: 2
-        x: 7
-        y: 95
-        width: 17
-        height: 19
+        x: 0
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -291,10 +291,10 @@ TextureImporter:
       name: YellowDuck_5
       rect:
         serializedVersion: 2
-        x: 38
-        y: 95
-        width: 17
-        height: 18
+        x: 32
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,10 +313,10 @@ TextureImporter:
       name: YellowDuck_6
       rect:
         serializedVersion: 2
-        x: 69
-        y: 95
-        width: 17
-        height: 18
+        x: 64
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -335,10 +335,10 @@ TextureImporter:
       name: YellowDuck_7
       rect:
         serializedVersion: 2
-        x: 102
-        y: 95
-        width: 17
-        height: 18
+        x: 96
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -357,10 +357,10 @@ TextureImporter:
       name: YellowDuck_8
       rect:
         serializedVersion: 2
-        x: 7
-        y: 63
-        width: 17
-        height: 18
+        x: 0
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -379,10 +379,10 @@ TextureImporter:
       name: YellowDuck_9
       rect:
         serializedVersion: 2
-        x: 38
-        y: 63
-        width: 19
-        height: 19
+        x: 32
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -401,10 +401,10 @@ TextureImporter:
       name: YellowDuck_10
       rect:
         serializedVersion: 2
-        x: 71
-        y: 63
-        width: 17
-        height: 19
+        x: 64
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -423,10 +423,10 @@ TextureImporter:
       name: YellowDuck_11
       rect:
         serializedVersion: 2
-        x: 103
-        y: 63
-        width: 17
-        height: 18
+        x: 96
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -445,10 +445,10 @@ TextureImporter:
       name: YellowDuck_12
       rect:
         serializedVersion: 2
-        x: 135
-        y: 63
-        width: 18
-        height: 19
+        x: 128
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -467,10 +467,10 @@ TextureImporter:
       name: YellowDuck_13
       rect:
         serializedVersion: 2
-        x: 167
-        y: 63
-        width: 17
-        height: 19
+        x: 160
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -489,10 +489,10 @@ TextureImporter:
       name: YellowDuck_14
       rect:
         serializedVersion: 2
-        x: 6
-        y: 31
-        width: 17
-        height: 19
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -511,10 +511,10 @@ TextureImporter:
       name: YellowDuck_15
       rect:
         serializedVersion: 2
-        x: 37
-        y: 31
-        width: 17
-        height: 18
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -533,10 +533,10 @@ TextureImporter:
       name: YellowDuck_16
       rect:
         serializedVersion: 2
-        x: 70
-        y: 31
-        width: 15
-        height: 16
+        x: 64
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -555,10 +555,10 @@ TextureImporter:
       name: YellowDuck_17
       rect:
         serializedVersion: 2
-        x: 104
-        y: 31
-        width: 22
-        height: 19
+        x: 96
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -577,10 +577,10 @@ TextureImporter:
       name: YellowDuck_18
       rect:
         serializedVersion: 2
-        x: 136
-        y: 31
-        width: 23
-        height: 20
+        x: 128
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -599,10 +599,10 @@ TextureImporter:
       name: YellowDuck_19
       rect:
         serializedVersion: 2
-        x: 151
-        y: 35
-        width: 9
-        height: 7
+        x: 160
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -621,10 +621,10 @@ TextureImporter:
       name: YellowDuck_20
       rect:
         serializedVersion: 2
-        x: 167
-        y: 31
-        width: 25
-        height: 19
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -643,10 +643,10 @@ TextureImporter:
       name: YellowDuck_21
       rect:
         serializedVersion: 2
-        x: 6
+        x: 32
         y: 0
-        width: 17
-        height: 18
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -665,10 +665,10 @@ TextureImporter:
       name: YellowDuck_22
       rect:
         serializedVersion: 2
-        x: 39
+        x: 64
         y: 0
-        width: 18
-        height: 18
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -687,10 +687,10 @@ TextureImporter:
       name: YellowDuck_23
       rect:
         serializedVersion: 2
-        x: 72
+        x: 96
         y: 0
-        width: 20
-        height: 19
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -709,10 +709,10 @@ TextureImporter:
       name: YellowDuck_24
       rect:
         serializedVersion: 2
-        x: 108
+        x: 128
         y: 0
-        width: 20
-        height: 12
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -731,10 +731,10 @@ TextureImporter:
       name: YellowDuck_25
       rect:
         serializedVersion: 2
-        x: 140
+        x: 160
         y: 0
-        width: 20
-        height: 12
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -749,33 +749,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: YellowDuck_26
-      rect:
-        serializedVersion: 2
-        x: 172
-        y: 0
-        width: 20
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 90ddf3e3c2c286d70800000000000000
-      internalID: 9036521220853456137
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 583baa6d05c3a48e1ae892b5b43fd261
     internalID: 0
     vertices: []
     indices: 
@@ -804,7 +782,6 @@ TextureImporter:
       YellowDuck_23: -8144420544045544345
       YellowDuck_24: -4337883564440322825
       YellowDuck_25: 4141758656170771302
-      YellowDuck_26: 9036521220853456137
       YellowDuck_3: 4271772934716746208
       YellowDuck_4: -7580570855886773917
       YellowDuck_5: 3095998973452642819

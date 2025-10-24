@@ -112,7 +112,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -149,7 +149,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -178,10 +178,10 @@ TextureImporter:
       name: GreenTortoise_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 127
-        width: 19
-        height: 13
+        x: 0
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,10 +200,10 @@ TextureImporter:
       name: GreenTortoise_1
       rect:
         serializedVersion: 2
-        x: 36
-        y: 127
-        width: 19
-        height: 13
+        x: 32
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -222,10 +222,10 @@ TextureImporter:
       name: GreenTortoise_2
       rect:
         serializedVersion: 2
-        x: 68
-        y: 127
-        width: 19
-        height: 13
+        x: 64
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,10 +244,10 @@ TextureImporter:
       name: GreenTortoise_3
       rect:
         serializedVersion: 2
-        x: 100
-        y: 127
-        width: 19
-        height: 13
+        x: 96
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,10 +266,10 @@ TextureImporter:
       name: GreenTortoise_4
       rect:
         serializedVersion: 2
-        x: 5
-        y: 95
-        width: 19
-        height: 14
+        x: 0
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -288,10 +288,10 @@ TextureImporter:
       name: GreenTortoise_5
       rect:
         serializedVersion: 2
-        x: 36
-        y: 95
-        width: 21
-        height: 14
+        x: 32
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -310,10 +310,10 @@ TextureImporter:
       name: GreenTortoise_6
       rect:
         serializedVersion: 2
-        x: 67
-        y: 95
-        width: 22
-        height: 14
+        x: 64
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -332,10 +332,10 @@ TextureImporter:
       name: GreenTortoise_7
       rect:
         serializedVersion: 2
-        x: 100
-        y: 95
-        width: 20
-        height: 14
+        x: 96
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -354,10 +354,10 @@ TextureImporter:
       name: GreenTortoise_8
       rect:
         serializedVersion: 2
-        x: 4
-        y: 63
-        width: 21
-        height: 15
+        x: 0
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -376,10 +376,10 @@ TextureImporter:
       name: GreenTortoise_9
       rect:
         serializedVersion: 2
-        x: 36
-        y: 63
-        width: 22
-        height: 15
+        x: 32
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -398,10 +398,10 @@ TextureImporter:
       name: GreenTortoise_10
       rect:
         serializedVersion: 2
-        x: 68
-        y: 63
-        width: 23
-        height: 14
+        x: 64
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -420,10 +420,10 @@ TextureImporter:
       name: GreenTortoise_11
       rect:
         serializedVersion: 2
-        x: 100
-        y: 63
-        width: 22
-        height: 14
+        x: 96
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -442,10 +442,10 @@ TextureImporter:
       name: GreenTortoise_12
       rect:
         serializedVersion: 2
-        x: 132
-        y: 63
-        width: 20
-        height: 15
+        x: 128
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -464,10 +464,10 @@ TextureImporter:
       name: GreenTortoise_13
       rect:
         serializedVersion: 2
-        x: 164
-        y: 63
-        width: 20
-        height: 15
+        x: 160
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -486,10 +486,10 @@ TextureImporter:
       name: GreenTortoise_14
       rect:
         serializedVersion: 2
-        x: 4
-        y: 31
-        width: 21
-        height: 14
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -508,10 +508,10 @@ TextureImporter:
       name: GreenTortoise_15
       rect:
         serializedVersion: 2
-        x: 35
-        y: 31
-        width: 21
-        height: 14
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -530,10 +530,10 @@ TextureImporter:
       name: GreenTortoise_16
       rect:
         serializedVersion: 2
-        x: 67
-        y: 31
-        width: 21
-        height: 13
+        x: 64
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -552,10 +552,10 @@ TextureImporter:
       name: GreenTortoise_17
       rect:
         serializedVersion: 2
-        x: 102
-        y: 31
-        width: 26
-        height: 14
+        x: 96
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -574,10 +574,10 @@ TextureImporter:
       name: GreenTortoise_18
       rect:
         serializedVersion: 2
-        x: 135
-        y: 31
-        width: 25
-        height: 14
+        x: 128
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -596,10 +596,10 @@ TextureImporter:
       name: GreenTortoise_19
       rect:
         serializedVersion: 2
-        x: 166
-        y: 31
-        width: 26
-        height: 14
+        x: 160
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -618,10 +618,10 @@ TextureImporter:
       name: GreenTortoise_20
       rect:
         serializedVersion: 2
-        x: 6
+        x: 0
         y: 0
-        width: 18
-        height: 20
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -640,10 +640,10 @@ TextureImporter:
       name: GreenTortoise_21
       rect:
         serializedVersion: 2
-        x: 37
+        x: 32
         y: 0
-        width: 18
-        height: 20
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -662,10 +662,10 @@ TextureImporter:
       name: GreenTortoise_22
       rect:
         serializedVersion: 2
-        x: 65
+        x: 64
         y: 0
-        width: 20
-        height: 14
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -686,8 +686,8 @@ TextureImporter:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 21
-        height: 14
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -706,10 +706,10 @@ TextureImporter:
       name: GreenTortoise_24
       rect:
         serializedVersion: 2
-        x: 127
+        x: 128
         y: 0
-        width: 23
-        height: 11
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -728,10 +728,10 @@ TextureImporter:
       name: GreenTortoise_25
       rect:
         serializedVersion: 2
-        x: 159
+        x: 160
         y: 0
-        width: 23
-        height: 11
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -750,7 +750,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 23a902df8b3b547f4b3b6e71f1de247a
     internalID: 0
     vertices: []
     indices: 

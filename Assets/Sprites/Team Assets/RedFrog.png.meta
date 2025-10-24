@@ -112,7 +112,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -149,7 +149,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -178,10 +178,10 @@ TextureImporter:
       name: RedFrog_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 127
-        width: 17
-        height: 14
+        x: 0
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,10 +200,10 @@ TextureImporter:
       name: RedFrog_1
       rect:
         serializedVersion: 2
-        x: 38
-        y: 127
-        width: 17
-        height: 14
+        x: 32
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -222,10 +222,10 @@ TextureImporter:
       name: RedFrog_2
       rect:
         serializedVersion: 2
-        x: 70
-        y: 127
-        width: 18
-        height: 14
+        x: 64
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,10 +244,10 @@ TextureImporter:
       name: RedFrog_3
       rect:
         serializedVersion: 2
-        x: 102
-        y: 127
-        width: 17
-        height: 14
+        x: 96
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,10 +266,10 @@ TextureImporter:
       name: RedFrog_4
       rect:
         serializedVersion: 2
-        x: 6
-        y: 95
-        width: 18
-        height: 13
+        x: 0
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -288,10 +288,10 @@ TextureImporter:
       name: RedFrog_5
       rect:
         serializedVersion: 2
-        x: 38
-        y: 95
-        width: 18
-        height: 14
+        x: 32
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -310,10 +310,10 @@ TextureImporter:
       name: RedFrog_6
       rect:
         serializedVersion: 2
-        x: 70
-        y: 95
-        width: 18
-        height: 13
+        x: 64
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -332,10 +332,10 @@ TextureImporter:
       name: RedFrog_7
       rect:
         serializedVersion: 2
-        x: 102
-        y: 95
-        width: 17
-        height: 14
+        x: 96
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -354,10 +354,10 @@ TextureImporter:
       name: RedFrog_8
       rect:
         serializedVersion: 2
-        x: 6
-        y: 63
-        width: 17
-        height: 13
+        x: 0
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -376,10 +376,10 @@ TextureImporter:
       name: RedFrog_9
       rect:
         serializedVersion: 2
-        x: 38
-        y: 63
-        width: 17
-        height: 12
+        x: 32
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -398,10 +398,10 @@ TextureImporter:
       name: RedFrog_10
       rect:
         serializedVersion: 2
-        x: 68
-        y: 63
-        width: 19
-        height: 16
+        x: 64
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -420,10 +420,10 @@ TextureImporter:
       name: RedFrog_11
       rect:
         serializedVersion: 2
-        x: 104
-        y: 65
-        width: 17
-        height: 14
+        x: 96
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -442,10 +442,10 @@ TextureImporter:
       name: RedFrog_12
       rect:
         serializedVersion: 2
-        x: 135
-        y: 65
-        width: 18
-        height: 14
+        x: 128
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -464,10 +464,10 @@ TextureImporter:
       name: RedFrog_13
       rect:
         serializedVersion: 2
-        x: 168
-        y: 63
-        width: 17
-        height: 13
+        x: 160
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -486,10 +486,10 @@ TextureImporter:
       name: RedFrog_14
       rect:
         serializedVersion: 2
-        x: 5
-        y: 31
-        width: 18
-        height: 14
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -508,10 +508,10 @@ TextureImporter:
       name: RedFrog_15
       rect:
         serializedVersion: 2
-        x: 37
-        y: 31
-        width: 17
-        height: 14
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -530,10 +530,10 @@ TextureImporter:
       name: RedFrog_16
       rect:
         serializedVersion: 2
-        x: 70
-        y: 31
-        width: 17
-        height: 13
+        x: 64
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -552,10 +552,10 @@ TextureImporter:
       name: RedFrog_17
       rect:
         serializedVersion: 2
-        x: 102
-        y: 31
-        width: 27
-        height: 14
+        x: 96
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -574,10 +574,10 @@ TextureImporter:
       name: RedFrog_18
       rect:
         serializedVersion: 2
-        x: 135
-        y: 31
-        width: 26
-        height: 13
+        x: 128
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -596,10 +596,10 @@ TextureImporter:
       name: RedFrog_19
       rect:
         serializedVersion: 2
-        x: 166
-        y: 31
-        width: 18
-        height: 14
+        x: 160
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -618,10 +618,10 @@ TextureImporter:
       name: RedFrog_20
       rect:
         serializedVersion: 2
-        x: 7
+        x: 0
         y: 0
-        width: 16
-        height: 13
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -640,10 +640,10 @@ TextureImporter:
       name: RedFrog_21
       rect:
         serializedVersion: 2
-        x: 41
-        y: 3
-        width: 13
-        height: 16
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -662,10 +662,10 @@ TextureImporter:
       name: RedFrog_22
       rect:
         serializedVersion: 2
-        x: 72
-        y: 1
-        width: 16
-        height: 13
+        x: 64
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -684,10 +684,10 @@ TextureImporter:
       name: RedFrog_23
       rect:
         serializedVersion: 2
-        x: 104
+        x: 96
         y: 0
-        width: 16
-        height: 9
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -706,10 +706,10 @@ TextureImporter:
       name: RedFrog_24
       rect:
         serializedVersion: 2
-        x: 136
+        x: 128
         y: 0
-        width: 16
-        height: 11
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -728,10 +728,10 @@ TextureImporter:
       name: RedFrog_25
       rect:
         serializedVersion: 2
-        x: 168
+        x: 160
         y: 0
-        width: 16
-        height: 10
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -750,7 +750,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 78f71e369850c4fae9ada45d2019c57f
     internalID: 0
     vertices: []
     indices: 
