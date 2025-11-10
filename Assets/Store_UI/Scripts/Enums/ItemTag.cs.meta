@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 195b18c85fc16e84690be89511476c51
+timeCreated: 1508511989
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 102984
+  packageName: Fantasy Inventory System
+  packageVersion: 1.2
+  assetPath: Assets/FantasyInventory/Scripts/Enums/ItemTag.cs
+  uploadId: 388302

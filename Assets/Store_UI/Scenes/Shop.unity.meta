@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2639d34d0b65c2740858e0284f11468f
+timeCreated: 1508494600
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 102984
+  packageName: Fantasy Inventory System
+  packageVersion: 1.2
+  assetPath: Assets/FantasyInventory/Scenes/Shop.unity
+  uploadId: 388302
