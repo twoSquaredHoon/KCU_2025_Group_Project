@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 19c811bc87eaeaa40b393fb28d6a70cb
+timeCreated: 1508494765
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 102984
+  packageName: Fantasy Inventory System
+  packageVersion: 1.2
+  assetPath: Assets/FantasyInventory/Scripts/Interface/Inventory.cs
+  uploadId: 388302
