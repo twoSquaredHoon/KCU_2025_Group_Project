@@ -11,7 +11,7 @@ public class Team_Type_1 : Team
         hp = 50f;
         attackPower = 8f;
         attackSpeed = 0.41f;
-        moveSpeed = 5f;
+        moveSpeed = 1f;
     }
     void LateUpdate()
     {

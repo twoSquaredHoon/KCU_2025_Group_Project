@@ -22,6 +22,8 @@ public class Team : MonoBehaviour
     protected float stopDistance;
     protected Transform targetToStop;
     [SerializeField] protected List<Enemy> opponents;
+    [SerializeField] protected bool frozen;
+    [SerializeField] protected float frozenTimer;
 
     protected virtual void Start()
     {
@@ -29,12 +31,14 @@ public class Team : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         hp = 100f;
         attackPower = 20f;
-        moveSpeed = 5f;
+        moveSpeed = 2f;
         attackSpeed = 3f; //n초 마다 공격
         attackTimer = 0f;
         canMove = true;
         stopDistance = 5f;
         opponents = new List<Enemy>();
+        frozen = false;
+        frozenTimer = 0f;
 
         rb = gameObject.GetComponent<Rigidbody2D>();
         if (rb != null)
@@ -64,14 +68,14 @@ public class Team : MonoBehaviour
             }
         }
 
-        if (canMove)
+        if (!frozen && canMove)
         {
             if (opponents.Count == 0)
             {
                 moveEntity();
             }
         }
-        else
+        else if (!frozen)
         {
             attack();
         }
@@ -162,7 +166,7 @@ public class Team : MonoBehaviour
     public virtual void getDamage(float num)
     {
         hp -= num;
-        Debug.Log(spriteRenderer.sprite.name + " received " + num + " damage.");
+        //Debug.Log(spriteRenderer.sprite.name + " received " + num + " damage.");
     }
 
     protected virtual void moveEntity()
@@ -183,6 +187,44 @@ public class Team : MonoBehaviour
     {
         return !canMove;
     }
+
+    public virtual void freeze(float num)
+    {
+        Debug.Log("Freeze called");
+        if (frozen)
+        {
+            frozenTimer = 0f;
+        } else
+        {
+            StartCoroutine(freezeHelp(num));
+        }
+        Debug.Log("Freeze call ended");
+        
+    }
+
+    protected virtual IEnumerator freezeHelp(float num)
+    {
+        Debug.Log("Frozen!!!!!!!!!!");
+
+        frozen = true;
+        Color original = spriteRenderer.color;
+        spriteRenderer.color = new Color(0f, 0.2f, 0.7f, 1f); 
+        frozenTimer = 0f;
+
+        while (frozenTimer < num)
+        {
+            Debug.Log(frozenTimer);
+            frozenTimer += Time.deltaTime;
+            yield return null;
+        }
+
+        frozenTimer = 0f;
+        frozen = false;
+        spriteRenderer.color = original;
+
+        Debug.Log("not Frozen");
+    }
+
 
     
 
