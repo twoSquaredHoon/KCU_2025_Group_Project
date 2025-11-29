@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ice : MonoBehaviour
+public class dawn_attack : MonoBehaviour
 {
     protected float damage;
     protected float moveSpeed;
@@ -50,7 +50,7 @@ public class ice : MonoBehaviour
             if (opponent != null)
             {
                 opponent.getDamage(damage);
-                opponent.freeze(0.5f);
+                opponent.freeze(2);
                 Destroy(gameObject);
             }
         }

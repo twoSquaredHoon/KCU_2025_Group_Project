@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
     protected float attackPower;
     protected float moveSpeed;
     protected float attackSpeed;
-    protected float attackTimer;
+    [SerializeField] protected float attackTimer;
     [SerializeField] protected bool canMove;
     protected float stopDistance;
     protected Transform targetToStop;
@@ -110,7 +110,7 @@ public class Enemy : MonoBehaviour
      */
     protected virtual void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log(name + ": TriggerExit On!");
+        // Debug.Log(name + ": TriggerExit On!");
         bool isOpponent = other.CompareTag("Team");
         if (isOpponent)
         {
@@ -162,7 +162,7 @@ public class Enemy : MonoBehaviour
     public virtual void getDamage(float num)
     {
         hp -= num;
-        Debug.Log(spriteRenderer.sprite.name + " received " + num + " damage.");
+        // Debug.Log(spriteRenderer.sprite.name + " received " + num + " damage.");
     }
 
     protected virtual void moveEntity()

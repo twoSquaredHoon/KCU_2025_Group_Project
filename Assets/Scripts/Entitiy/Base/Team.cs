@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
+using Unity.PlasticSCM.Editor.WebApi;
 using Unity.VisualScripting;
 using UnityEngine;
 using Random=UnityEngine.Random;
@@ -11,6 +12,7 @@ public class Team : MonoBehaviour
     protected Rigidbody2D rb;
     protected SpriteRenderer spriteRenderer;
     protected Enemy opponent;
+    Animator animator;
 
     // Unit Stat (HP, 공격력, 등)
     [SerializeField] protected float hp;
@@ -24,6 +26,10 @@ public class Team : MonoBehaviour
     [SerializeField] protected List<Enemy> opponents;
     [SerializeField] protected bool frozen;
     [SerializeField] protected float frozenTimer;
+
+    private Coroutine freezeCoroutine = null;
+    private Color originalColor;
+
 
     protected virtual void Start()
     {
@@ -39,7 +45,7 @@ public class Team : MonoBehaviour
         opponents = new List<Enemy>();
         frozen = false;
         frozenTimer = 0f;
-
+        animator = GetComponent<Animator>();
         rb = gameObject.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
@@ -53,29 +59,31 @@ public class Team : MonoBehaviour
 
     protected virtual void Update()
     {
+        // Clean list
+        opponents.RemoveAll(o => o == null);
+
+        // Auto-clear opponent variable
+        if (opponents.Count == 0) {
+            opponent = null;
+            setCanMove(true);
+        }
+        else
+        {
+            opponent = opponents[0];
+        }
+
         if (hp <= 0 || transform.position.x > 18)
         {
             animateAndDestroy();
+            return;
         }
 
-        if (targetToStop != null && canMove)
+        // Movement logic
+        if (!frozen && canMove && opponents.Count == 0)
         {
-            float distance = targetToStop.position.x - transform.position.x;
-
-            if (Math.Abs(distance) < stopDistance)
-            {
-                setCanMove(false);
-            }
+            moveEntity();
         }
-
-        if (!frozen && canMove)
-        {
-            if (opponents.Count == 0)
-            {
-                moveEntity();
-            }
-        }
-        else if (!frozen)
+        else if (!frozen && opponents.Count > 0)
         {
             attack();
         }
@@ -114,22 +122,11 @@ public class Team : MonoBehaviour
      */
     protected virtual void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log(name + ": TriggerExit On!");
-        bool isOpponent = other.CompareTag("Enemy");
-        if (isOpponent)
+        if (other.CompareTag("Enemy"))
         {
-            if (opponents.Count > 0)
-            {
-                opponent = opponents[0];
-                setCanMove(false);
-            }
-            else
-            {
-                opponent = null;
-                setCanMove(true);
-            } 
+            Enemy enemy = other.GetComponent<Enemy>();
+            opponents.Remove(enemy);
         }
-        
     }
 
     /* 
@@ -141,20 +138,17 @@ public class Team : MonoBehaviour
      */
     public virtual void attack()
     {
-        if (opponent != null)
+        if (opponent == null) return;
+
+        attackTimer += Time.deltaTime;
+
+        if (attackTimer >= attackSpeed)
         {
-            attackTimer += Time.deltaTime;
-            if (attackTimer >= attackSpeed)
-            {
-                opponent.getDamage(attackPower);
-                attackTimer = 0f;
-            }
+            opponent.getDamage(attackPower);
+            attackTimer = 0f;
         }
-        if (opponents[0] == null)
-        {
-            opponents.RemoveAt(0);
-            setCanMove(true);
-        }
+
+        opponents.RemoveAll(o => o == null);
     }
     
 
@@ -190,42 +184,76 @@ public class Team : MonoBehaviour
 
     public virtual void freeze(float num)
     {
-        Debug.Log("Freeze called");
-        if (frozen)
+        // 초기 originalColor 저장
+        if (originalColor == default(Color))
+            originalColor = spriteRenderer.color;
+
+        // 기존 코루틴이 있으면 중지 + 복구
+        if (freezeCoroutine != null)
         {
-            frozenTimer = 0f;
-        } else
-        {
-            StartCoroutine(freezeHelp(num));
+            StopCoroutine(freezeCoroutine);
+            UnfreezeState();   // 애니메이션/색 복구
         }
-        Debug.Log("Freeze call ended");
-        
+
+        // 새로운 freeze 시작
+        freezeCoroutine = StartCoroutine(freezeHelp(num));
     }
 
-    protected virtual IEnumerator freezeHelp(float num)
+    private IEnumerator freezeHelp(float num)
     {
-        Debug.Log("Frozen!!!!!!!!!!");
+        ApplyFreezeState();
 
-        frozen = true;
-        Color original = spriteRenderer.color;
-        spriteRenderer.color = new Color(0f, 0.2f, 0.7f, 1f); 
-        frozenTimer = 0f;
+        yield return new WaitForSeconds(num);
 
-        while (frozenTimer < num)
-        {
-            Debug.Log(frozenTimer);
-            frozenTimer += Time.deltaTime;
-            yield return null;
-        }
+        UnfreezeState();
 
-        frozenTimer = 0f;
-        frozen = false;
-        spriteRenderer.color = original;
-
-        Debug.Log("not Frozen");
+        freezeCoroutine = null;
     }
 
+    private void ApplyFreezeState()
+    {
+        frozen = true;
 
-    
+        if (animator != null)
+            animator.speed = 0f;
 
+        spriteRenderer.color = new Color(0f, 0.2f, 0.7f, 1f);
+    }
+
+    private void UnfreezeState()
+    {
+        frozen = false;
+
+        if (animator != null)
+            animator.speed = 1f;
+
+        spriteRenderer.color = originalColor;
+    }
+
+    public virtual void knockback(float knockbackDist, float freezeTime)
+    {
+        StopCoroutine("KnockbackCoroutine");  // avoid duplicate knockbacks
+        StartCoroutine(KnockbackCoroutine(knockbackDist, freezeTime));
+    }
+
+    private IEnumerator KnockbackCoroutine(float knockbackDist, float freezeTime)
+    {
+        float knocked = 0f;
+        float knockSpeed = 5f;  // tune this value
+
+        setCanMove(false);
+
+        while (knocked < knockbackDist)
+        {
+            knockSpeed += 0.3f;
+            float move = knockSpeed * Time.deltaTime;
+            transform.position += Vector3.left * move;
+            knocked += move;
+
+            yield return null; // wait for next frame
+        }
+
+        setCanMove(true);
+        freeze(freezeTime);
+    }
 }

@@ -37,38 +37,38 @@ public class Spawn_Enemy : MonoBehaviour
     void Update()
     {
 
-        if (timer1 > spawnrate1)
-        {
-            timer1 = 0;
-            Instantiate(enemy1);
+        // if (timer1 > spawnrate1)
+        // {
+        //     timer1 = 0;
+        //     Instantiate(enemy1);
 
-        }
-        else
-        {
-            timer1 = timer1 + Time.deltaTime * stage;
-        }
+        // }
+        // else
+        // {
+        //     timer1 = timer1 + Time.deltaTime * stage;
+        // }
 
-        if (timer2 > spawnrate2)
-        {
-            timer2 = 0;
-            Instantiate(enemy2);
-        }
-        else
-        {
-            timer2 = timer2 + Time.deltaTime * stage;
-        }
+        // if (timer2 > spawnrate2)
+        // {
+        //     timer2 = 0;
+        //     Instantiate(enemy2);
+        // }
+        // else
+        // {
+        //     timer2 = timer2 + Time.deltaTime * stage;
+        // }
 
-        if (timer3 > spawnrate3)
-        {
-            timer3 = 0;
-            Instantiate(enemy3);
-        }
-        else
-        {
-            timer3 = timer3 + Time.deltaTime * stage;
-        }
+        // if (timer3 > spawnrate3)
+        // {
+        //     timer3 = 0;
+        //     Instantiate(enemy3);
+        // }
+        // else
+        // {
+        //     timer3 = timer3 + Time.deltaTime * stage;
+        // }
 
-        stage = 1 + stageAcc * Mathf.Floor(actualTime / 30f); //30초마다 stageAcc 만큼 빨라짐
-        actualTime = actualTime + Time.deltaTime;
+        // stage = 1 + stageAcc * Mathf.Floor(actualTime / 30f); //30초마다 stageAcc 만큼 빨라짐
+        // actualTime = actualTime + Time.deltaTime;
     }
 }
