@@ -25,9 +25,9 @@ public class stage_3_boss : Enemy
         hp = 2000f;
         attackPower = 30f;
         attackSpeed = 1f;
-        attackSpeed1 = 4f;
-        attackSpeed2 = 10f;
-        attackSpeed3 = 20f;
+        attackSpeed1 = 1000f;
+        attackSpeed2 = 10000f;
+        attackSpeed3 = 5f;
         moveSpeed = 0.3f;
         attackRange = 2f;
         isAttacking = false;
@@ -161,7 +161,7 @@ public class stage_3_boss : Enemy
             if (Vector3.Distance(transform.position, obj.transform.position) <= attackRange * 2f) {
                 opponent = obj.GetComponent<Team>();
                 opponent.knockback(3f, 3f);
-                opponent.getDamage(attackPower * 2f);
+                opponent.getDamage(attackPower * 0f);
             }
         }
     }

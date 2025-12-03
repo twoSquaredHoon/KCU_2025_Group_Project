@@ -2698,6 +2698,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 608914397}
+  - component: {fileID: 608914401}
   - component: {fileID: 608914400}
   - component: {fileID: 608914399}
   - component: {fileID: 608914398}
@@ -2809,6 +2810,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 608914396}
   m_CullTransparentMesh: 1
+--- !u!114 &608914401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608914396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1b37f923737e4747a5a635671187f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner: {fileID: 1520911467}
+  enemy: {fileID: 5169160035274078956, guid: ceb5704e03fff405b8fc1621ed40abfc, type: 3}
+  type3: {fileID: 2670268929576752960, guid: 1b2cca9f91abe4294b0d7cfb6363a176, type: 3}
 --- !u!1 &609039708
 GameObject:
   m_ObjectHideFlags: 0
@@ -3760,9 +3776,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 421d13b3d6fc8479aa11c29f9f50c9b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawner: {fileID: 0}
-  enemy: {fileID: 0}
-  type2: {fileID: 0}
+  spawner: {fileID: 1520911467}
+  enemy: {fileID: 5169160035274078956, guid: ceb5704e03fff405b8fc1621ed40abfc, type: 3}
+  type2: {fileID: 1214442031833085121, guid: d17a6ab6813464323ba0b7b31320ccf3, type: 3}
 --- !u!1 &1206969961
 GameObject:
   m_ObjectHideFlags: 0
