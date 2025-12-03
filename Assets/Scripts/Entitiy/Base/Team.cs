@@ -4,15 +4,16 @@ using System.Collections.Generic;
 using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEngine;
-using Random=UnityEngine.Random;
+using Random = UnityEngine.Random;
 
-public class Team : MonoBehaviour
+public class Team : MonoBehaviour, IDamageable
 {
     protected Rigidbody2D rb;
     protected SpriteRenderer spriteRenderer;
-    protected Enemy opponent;
+    protected IDamageable opponent;
 
     // Unit Stat (HP, 공격력, 등)
+    protected bool isDead = false;
     [SerializeField] protected float hp;
     protected float attackPower;
     protected float moveSpeed;
@@ -21,7 +22,7 @@ public class Team : MonoBehaviour
     [SerializeField] protected bool canMove;
     protected float stopDistance;
     protected Transform targetToStop;
-    [SerializeField] protected List<Enemy> opponents;
+    [SerializeField] protected List<IDamageable> opponents;
 
     protected virtual void Start()
     {
@@ -34,7 +35,7 @@ public class Team : MonoBehaviour
         attackTimer = 0f;
         canMove = true;
         stopDistance = 5f;
-        opponents = new List<Enemy>();
+        opponents = new List<IDamageable>();
 
         rb = gameObject.GetComponent<Rigidbody2D>();
         if (rb != null)
@@ -81,52 +82,57 @@ public class Team : MonoBehaviour
         Object 함수 
     */
 
-    
+
 
     /* 다른 Collider이랑 부딪혔을 때 Tag가 Enemy이면 Opponent List에 opponent를 추가함
      * canMove를 false로 바꿈
      * 
      * @param other : 다른 유닛 collider (Team & Enemy 포함)
      */
-    protected virtual void OnTriggerEnter2D(Collider2D other)
+protected virtual void OnTriggerEnter2D(Collider2D other)
+{
+    // Team should only attack ENEMY
+    if (!other.CompareTag("Enemy"))
+        return;
+
+    IDamageable target = other.GetComponent<IDamageable>();
+
+    if (target != null && !opponents.Contains(target))
     {
-        bool isOpponent = other.CompareTag("Enemy");
-        if (isOpponent)
-        {
-            Enemy enemy = other.GetComponent<Enemy>();
-            if (enemy != null && !opponents.Contains(enemy))
-            {
-                opponents.Add(enemy);
-                setCanMove(false);
-                opponent = opponents[0];
-            }
-        }
+        opponents.Add(target);
+        setCanMove(false);
+        opponent = opponents[0];
     }
+}
+
 
     /* 부딪혔던 Collider이랑 더 이상 부딪힌 상태가 아니라면 발동 됨
      * opponents 리스트가 비어있으면 움직이도록 설정
      * 
      * @param other : 다른 유닛 collider (Team & Enemy 포함)
      */
-    protected virtual void OnTriggerExit2D(Collider2D other)
+protected virtual void OnTriggerExit2D(Collider2D other)
+{
+    if (!other.CompareTag("Enemy"))
+        return;
+
+    IDamageable target = other.GetComponent<IDamageable>();
+    if (target == null) return;
+
+    opponents.Remove(target);
+
+    if (opponents.Count > 0)
     {
-        Debug.Log(name + ": TriggerExit On!");
-        bool isOpponent = other.CompareTag("Enemy");
-        if (isOpponent)
-        {
-            if (opponents.Count > 0)
-            {
-                opponent = opponents[0];
-                setCanMove(false);
-            }
-            else
-            {
-                opponent = null;
-                setCanMove(true);
-            } 
-        }
-        
+        opponent = opponents[0];
+        setCanMove(false);
     }
+    else
+    {
+        opponent = null;
+        setCanMove(true);
+    }
+}
+
 
     /* 
         Helper 함수 
@@ -135,35 +141,61 @@ public class Team : MonoBehaviour
     /* opponents 리스트 가장 첫번째 유닛 (opponent)에게 attackPower만큼 대미지를 줌.
      * 
      */
-    public virtual void attack()
+public virtual void attack()
+{
+    // 1. Clean dead/destroyed opponents first
+    opponents.RemoveAll(o => o == null);
+
+    // 2. If no opponents left, stop attacking
+    if (opponents.Count == 0)
     {
-        if (opponent != null)
+        opponent = null;
+        setCanMove(true);
+        return;
+    }
+
+    // 3. Always target the first valid opponent
+    opponent = opponents[0];
+
+    // 4. Attack safely
+    attackTimer += Time.deltaTime;
+    if (attackTimer >= attackSpeed)
+    {
+        opponent.getDamage(attackPower);
+        attackTimer = 0f;
+
+        opponents.RemoveAll(o => o == null);
+
+        if (opponents.Count == 0)
         {
-            attackTimer += Time.deltaTime;
-            if (attackTimer >= attackSpeed)
-            {
-                opponent.getDamage(attackPower);
-                attackTimer = 0f;
-            }
-        }
-        if (opponents[0] == null)
-        {
-            opponents.RemoveAt(0);
+            opponent = null;
             setCanMove(true);
         }
     }
-    
+}
+
+
 
     public virtual void setCanMove(bool val)
     {
         canMove = val;
     }
 
-    public virtual void getDamage(float num)
+public virtual void getDamage(float num)
+{
+    if (this == null || spriteRenderer == null)
+        return;
+
+    hp -= num;
+
+    Debug.Log("Team took " + num + " damage.");
+
+    if (hp <= 0)
     {
-        hp -= num;
-        Debug.Log(spriteRenderer.sprite.name + " received " + num + " damage.");
+        animateAndDestroy();
     }
+}
+
 
     protected virtual void moveEntity()
     {
@@ -171,19 +203,25 @@ public class Team : MonoBehaviour
         /* 이동하는 애니메이션 추가 */
     }
 
-    protected virtual void animateAndDestroy()
-    {
-        /* 사망 애니메이션 추가 */
-        EntityManager.Unregister(this);
-        EntityManager.addDeadListTeam(this.name);
-        Destroy(gameObject);
-    }
+protected virtual void animateAndDestroy()
+{
+    if (isDead) return;
+    isDead = true;
+
+    EntityManager.Unregister(this);
+
+    string deadName = gameObject != null ? gameObject.name : "Unknown";
+    EntityManager.addDeadListTeam(deadName);
+
+    Destroy(gameObject);
+}
+
 
     protected virtual bool timeToAttack()
     {
         return !canMove;
     }
 
-    
+
 
 }

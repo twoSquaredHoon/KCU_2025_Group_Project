@@ -2,12 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Player : MonoBehaviour, IDamageable
 {
     public float speed = 5;
     public Rigidbody2D rb;
     public Animator anim;
     public int facingDirection = 1;
+    public float hp = 200f;
+
+    public void getDamage(float dmg)
+    {
+        hp -= dmg;
+        Debug.Log("Player took " + dmg + " damage! HP = " + hp);
+
+        if (hp <= 0)
+        {
+            Debug.Log("Player died!");
+        }
+    }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -25,8 +37,9 @@ public class NewBehaviourScript : MonoBehaviour
 
         rb.linearVelocity = new Vector2(horizontal, vertical) * speed;
     }
-    
-    void Flip() {
+
+    void Flip()
+    {
         facingDirection *= -1;
         transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
     }
