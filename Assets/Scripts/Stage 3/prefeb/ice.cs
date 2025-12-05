@@ -52,7 +52,7 @@ public class ice : MonoBehaviour
         if (opponent != null)
         {
             opponent.getDamage(damage);
-            // opponent.freeze(0.5f);
+            opponent.freeze(0.5f);
             Destroy(gameObject);
         }
     }
