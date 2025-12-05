@@ -1,8 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using JetBrains.Annotations;
-using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -12,7 +10,7 @@ public class Team : MonoBehaviour, IDamageable
     protected SpriteRenderer spriteRenderer;
     protected IDamageable opponent;
 
-    // Unit Stat (HP, 공격력, 등)
+    // Unit Stat
     protected bool isDead = false;
     [SerializeField] protected float hp;
     protected float attackPower;
@@ -24,20 +22,25 @@ public class Team : MonoBehaviour, IDamageable
     protected Transform targetToStop;
     [SerializeField] protected List<IDamageable> opponents;
 
+    // Freeze system (from 11/17/2025 branch)
+    [SerializeField] protected bool frozen = false;
+    [SerializeField] protected float frozenTimer = 0f;
+
     protected virtual void Start()
     {
         EntityManager.Register(this);
         spriteRenderer = GetComponent<SpriteRenderer>();
+
         hp = 100f;
         attackPower = 20f;
-        moveSpeed = 5f;
-        attackSpeed = 3f; //n초 마다 공격
+        moveSpeed = 5f;   // 최신 버전 유지
+        attackSpeed = 3f;
         attackTimer = 0f;
         canMove = true;
         stopDistance = 5f;
         opponents = new List<IDamageable>();
 
-        rb = gameObject.GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         if (rb != null)
         {
             rb.isKinematic = true;
@@ -55,22 +58,19 @@ public class Team : MonoBehaviour, IDamageable
             animateAndDestroy();
         }
 
+        if (frozen) return; // freeze 상태면 아무것도 못함
+
         if (targetToStop != null && canMove)
         {
             float distance = targetToStop.position.x - transform.position.x;
-
             if (Math.Abs(distance) < stopDistance)
-            {
                 setCanMove(false);
-            }
         }
 
         if (canMove)
         {
             if (opponents.Count == 0)
-            {
                 moveEntity();
-            }
         }
         else
         {
@@ -78,150 +78,135 @@ public class Team : MonoBehaviour, IDamageable
         }
     }
 
-    /* 
-        Object 함수 
-    */
-
-
-
-    /* 다른 Collider이랑 부딪혔을 때 Tag가 Enemy이면 Opponent List에 opponent를 추가함
-     * canMove를 false로 바꿈
-     * 
-     * @param other : 다른 유닛 collider (Team & Enemy 포함)
-     */
-protected virtual void OnTriggerEnter2D(Collider2D other)
-{
-    // Team should only attack ENEMY
-    if (!other.CompareTag("Enemy"))
-        return;
-
-    IDamageable target = other.GetComponent<IDamageable>();
-
-    if (target != null && !opponents.Contains(target))
+    protected virtual void OnTriggerEnter2D(Collider2D other)
     {
-        opponents.Add(target);
-        setCanMove(false);
-        opponent = opponents[0];
-    }
-}
+        if (!other.CompareTag("Enemy"))
+            return;
 
-
-    /* 부딪혔던 Collider이랑 더 이상 부딪힌 상태가 아니라면 발동 됨
-     * opponents 리스트가 비어있으면 움직이도록 설정
-     * 
-     * @param other : 다른 유닛 collider (Team & Enemy 포함)
-     */
-protected virtual void OnTriggerExit2D(Collider2D other)
-{
-    if (!other.CompareTag("Enemy"))
-        return;
-
-    IDamageable target = other.GetComponent<IDamageable>();
-    if (target == null) return;
-
-    opponents.Remove(target);
-
-    if (opponents.Count > 0)
-    {
-        opponent = opponents[0];
-        setCanMove(false);
-    }
-    else
-    {
-        opponent = null;
-        setCanMove(true);
-    }
-}
-
-
-    /* 
-        Helper 함수 
-    */
-
-    /* opponents 리스트 가장 첫번째 유닛 (opponent)에게 attackPower만큼 대미지를 줌.
-     * 
-     */
-public virtual void attack()
-{
-    // 1. Clean dead/destroyed opponents first
-    opponents.RemoveAll(o => o == null);
-
-    // 2. If no opponents left, stop attacking
-    if (opponents.Count == 0)
-    {
-        opponent = null;
-        setCanMove(true);
-        return;
+        IDamageable target = other.GetComponent<IDamageable>();
+        if (target != null && !opponents.Contains(target))
+        {
+            opponents.Add(target);
+            setCanMove(false);
+            opponent = opponents[0];
+        }
     }
 
-    // 3. Always target the first valid opponent
-    opponent = opponents[0];
-
-    // 4. Attack safely
-    attackTimer += Time.deltaTime;
-    if (attackTimer >= attackSpeed)
+    protected virtual void OnTriggerExit2D(Collider2D other)
     {
-        opponent.getDamage(attackPower);
-        attackTimer = 0f;
+        if (!other.CompareTag("Enemy"))
+            return;
 
+        IDamageable target = other.GetComponent<IDamageable>();
+        if (target == null) return;
+
+        opponents.Remove(target);
+
+        if (opponents.Count > 0)
+        {
+            opponent = opponents[0];
+            setCanMove(false);
+        }
+        else
+        {
+            opponent = null;
+            setCanMove(true);
+        }
+    }
+
+    public virtual void attack()
+    {
         opponents.RemoveAll(o => o == null);
 
         if (opponents.Count == 0)
         {
             opponent = null;
             setCanMove(true);
+            return;
+        }
+
+        opponent = opponents[0];
+
+        attackTimer += Time.deltaTime;
+        if (attackTimer >= attackSpeed)
+        {
+            opponent.getDamage(attackPower);
+            attackTimer = 0f;
+
+            opponents.RemoveAll(o => o == null);
+
+            if (opponents.Count == 0)
+            {
+                opponent = null;
+                setCanMove(true);
+            }
         }
     }
-}
-
-
 
     public virtual void setCanMove(bool val)
     {
-        canMove = val;
+        if (!frozen)
+            canMove = val;
     }
 
-public virtual void getDamage(float num)
-{
-    if (this == null || spriteRenderer == null)
-        return;
-
-    hp -= num;
-
-    Debug.Log("Team took " + num + " damage.");
-
-    if (hp <= 0)
+    public virtual void getDamage(float num)
     {
-        animateAndDestroy();
-    }
-}
+        if (this == null || spriteRenderer == null)
+            return;
 
+        hp -= num;
+
+        if (hp <= 0)
+            animateAndDestroy();
+    }
 
     protected virtual void moveEntity()
     {
         transform.position += Vector3.right * moveSpeed * Time.deltaTime;
-        /* 이동하는 애니메이션 추가 */
     }
 
-protected virtual void animateAndDestroy()
-{
-    if (isDead) return;
-    isDead = true;
-
-    EntityManager.Unregister(this);
-
-    string deadName = gameObject != null ? gameObject.name : "Unknown";
-    EntityManager.addDeadListTeam(deadName);
-
-    Destroy(gameObject);
-}
-
-
-    protected virtual bool timeToAttack()
+    protected virtual void animateAndDestroy()
     {
-        return !canMove;
+        if (isDead) return;
+        isDead = true;
+
+        EntityManager.Unregister(this);
+
+        string deadName = gameObject != null ? gameObject.name : "Unknown";
+        EntityManager.addDeadListTeam(deadName);
+
+        Destroy(gameObject);
     }
 
+    // Freeze system fully restored
+    public virtual void freeze(float duration)
+    {
+        if (frozen)
+        {
+            frozenTimer = 0f;
+        }
+        else
+        {
+            StartCoroutine(freezeCoroutine(duration));
+        }
+    }
 
+    protected IEnumerator freezeCoroutine(float duration)
+    {
+        frozen = true;
+        frozenTimer = 0f;
 
+        Color original = spriteRenderer.color;
+        spriteRenderer.color = new Color(0f, 0.2f, 0.7f, 1f);
+
+        while (frozenTimer < duration)
+        {
+            frozenTimer += Time.deltaTime;
+            yield return null;
+        }
+
+        frozen = false;
+        frozenTimer = 0f;
+        spriteRenderer.color = original;
+    }
 }

@@ -42,7 +42,7 @@
     <UnityVersion>6000.0.60f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="/Users/seunghoon/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.2.0/Analyzers/Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="/Users/a/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.2.0/Analyzers/Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.0.60f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll" />
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.0.60f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.0.60f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
@@ -73,6 +73,7 @@
     <Compile Include="Assets/Scripts/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventCheck.cs" />
     <Compile Include="Assets/Scripts/UI/Button/TeamButton/Button_Team_Type_2.cs" />
     <Compile Include="Assets/Scripts/TextMesh Pro/Examples &amp; Extras/Scripts/ChatController.cs" />
+    <Compile Include="Assets/Scripts/Core/SceneChanger.cs" />
     <Compile Include="Assets/Scripts/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs" />
     <Compile Include="Assets/Main Menu/Scripts/_menuAnimations.cs" />
     <Compile Include="Assets/Scripts/Entitiy/Base/Team.cs" />
@@ -96,6 +97,7 @@
     <Compile Include="Assets/Scripts/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01.cs" />
     <Compile Include="Assets/Store_UI/Scripts/Interface/Elements/DragReceiver.cs" />
     <Compile Include="Assets/Scripts/TextMesh Pro/Examples &amp; Extras/Scripts/TeleType.cs" />
+    <Compile Include="Assets/Scripts/Stage 3/prefeb/stage_3_1.cs" />
     <Compile Include="Assets/Scripts/TextMesh Pro/Examples &amp; Extras/Scripts/ShaderPropAnimator.cs" />
     <Compile Include="Assets/Scripts/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_FrameRateCounter.cs" />
     <Compile Include="Assets/Store_UI/Scripts/Interface/Elements/ScrollInventory.cs" />
@@ -104,6 +106,7 @@
     <Compile Include="Assets/Scripts/Player/Player.cs" />
     <Compile Include="Assets/Main Menu/Scripts/MainMenuManager.cs" />
     <Compile Include="Assets/Scripts/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark04.cs" />
+    <Compile Include="Assets/Scripts/Stage 3/prefeb/ice.cs" />
     <Compile Include="Assets/Scripts/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_ExampleScript_01.cs" />
     <Compile Include="Assets/Scripts/TextMesh Pro/Examples &amp; Extras/Scripts/VertexJitter.cs" />
     <Compile Include="Assets/Scripts/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeB.cs" />
@@ -121,10 +124,12 @@
     <Compile Include="Assets/Scripts/UI/HUD/CountdownTimer.cs" />
     <Compile Include="Assets/Scripts/TextMesh Pro/Examples &amp; Extras/Scripts/VertexZoom.cs" />
     <Compile Include="Assets/Scripts/Spawning/Spawn_Team.cs" />
+    <Compile Include="Assets/Scripts/Player/PlayerMovement.cs" />
     <Compile Include="Assets/Scripts/Combat/Arrow.cs" />
     <Compile Include="Assets/Scripts/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshSpawner.cs" />
     <Compile Include="Assets/Scripts/UI/Button/TeamButton/Button_Team_Type_3.cs" />
     <Compile Include="Assets/Scripts/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeA.cs" />
+    <Compile Include="Assets/Scripts/Stage 3/prefeb/stage_3_1_button.cs" />
     <Compile Include="Assets/Scripts/TextMesh Pro/Examples &amp; Extras/Scripts/VertexColorCycler.cs" />
     <Compile Include="Assets/Scripts/Entitiy/Base/Enemy.cs" />
     <Compile Include="Assets/Scripts/UI/Button/TeamButton/Button_Team_Type_1.cs" />
