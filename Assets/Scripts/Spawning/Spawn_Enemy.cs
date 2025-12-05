@@ -38,6 +38,8 @@ public class Spawn_Enemy : MonoBehaviour
         timer3 = 0;
         actualTime = 0;
         bossTimer = 0f;
+
+        Instantiate(bossEnemyPrefab, transform.position, Quaternion.identity);
     }
 
     void Update()
@@ -77,45 +79,45 @@ public class Spawn_Enemy : MonoBehaviour
         stage = 1 + stageAcc * Mathf.Floor(actualTime / 30f); //30초마다 stageAcc 만큼 빨라짐
         actualTime = actualTime + Time.deltaTime;
 
-        // ✅ 보스 스폰 로직
-        bossTimer += Time.deltaTime;
+        // // ✅ 보스 스폰 로직
+        // bossTimer += Time.deltaTime;
 
-        if (bossTimer >= bossSpawnRate)
-        {
-            bossTimer = 0f;
+        // if (bossTimer >= bossSpawnRate)
+        // {
+        //     bossTimer = 0f;
 
-            var enemyList = EntityManager.getEnemyList();
-            if (enemyList != null)
-            {
-                // 1) Destroy되었거나 null인 Enemy들 제거
-                enemyList.RemoveAll(e => e == null);
+        //     var enemyList = EntityManager.getEnemyList();
+        //     if (enemyList != null)
+        //     {
+        //         // 1) Destroy되었거나 null인 Enemy들 제거
+        //         enemyList.RemoveAll(e => e == null);
 
-                // 2) 보스 존재 여부를 foreach로 직접 검사 (람다/Exists 안 씀)
-                bool bossExists = false;
-                foreach (var e in enemyList)
-                {
-                    if (e is Boss_Enemy)
-                    {
-                        bossExists = true;
-                        break;
-                    }
-                }
+        //         // 2) 보스 존재 여부를 foreach로 직접 검사 (람다/Exists 안 씀)
+        //         bool bossExists = false;
+        //         foreach (var e in enemyList)
+        //         {
+        //             if (e is Boss_Enemy)
+        //             {
+        //                 bossExists = true;
+        //                 break;
+        //             }
+        //         }
 
-                // 3) 보스가 없으면 새로 소환
-                if (!bossExists)
-                {
-                    if (bossEnemyPrefab == null)
-                    {
-                        Debug.LogError("Boss prefab is not assigned on Spawn_Enemy!");
-                    }
-                    else
-                    {
-                        Instantiate(bossEnemyPrefab, transform.position, Quaternion.identity);
-                        Debug.Log("Boss is born!");
-                    }
-                }
-            }
-        }
+        //         // 3) 보스가 없으면 새로 소환
+        //         if (!bossExists)
+        //         {
+        //             if (bossEnemyPrefab == null)
+        //             {
+        //                 Debug.LogError("Boss prefab is not assigned on Spawn_Enemy!");
+        //             }
+        //             else
+        //             {
+                        
+        //                 Debug.Log("Boss is born!");
+        //             }
+        //         }
+        //     }
+        // }
 
     }
 }
