@@ -4,14 +4,14 @@ using TMPro;
 
 public class EnergyUI : MonoBehaviour
 {
-    [SerializeField] private Spawn_Team spawner;   
-    [SerializeField] private Image energyBar;      
-    [SerializeField] private TMP_Text energyText;  
+    [SerializeField] private Spawn_Team spawner;
+    [SerializeField] private Image energyBar;
+    [SerializeField] private TMP_Text energyText;
 
     private void Start()
     {
         if (spawner == null)
-            spawner = FindObjectOfType<Spawn_Team>();
+            spawner = FindFirstObjectByType<Spawn_Team>();
     }
 
     private void Update()

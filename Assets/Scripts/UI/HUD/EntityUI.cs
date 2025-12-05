@@ -8,14 +8,14 @@ public class TeamCounterUI : MonoBehaviour
 {
     [SerializeField] private TMP_Text teamCountText;
     [SerializeField] private TMP_Text enemyCountText;
-    [SerializeField] private float refreshRate = 0.5f; 
+    [SerializeField] private float refreshRate = 0.5f;
 
     private float timer = 0f;
 
     private readonly string[] allTeamTypes = { "Team_Type_1", "Team_Type_2", "Team_Type_3" };
-    private readonly string[] allEnemyTypes = { "Enemy_Type_1", "Enemy_Type_2", "Enemy_Type_3" };
+    private readonly string[] allEnemyTypes = { "Enemy_Type_1", "Enemy_Type_2", "Enemy_Type_3", "Boss_Enemy" };
 
-     private void Update()
+    private void Update()
     {
         timer += Time.deltaTime;
         if (timer >= refreshRate)
@@ -62,7 +62,11 @@ public class TeamCounterUI : MonoBehaviour
         foreach (string typeName in allEnemyTypes)
         {
             int count = enemyGroups.ContainsKey(typeName) ? enemyGroups[typeName] : 0;
-            sb.AppendLine($"{typeName}: {count}");
+
+            if (typeName == "Boss_Enemy")   // ✅ 보스 강조
+                sb.AppendLine($"<color=red><b>{typeName}: {count}</b></color>");
+            else
+                sb.AppendLine($"{typeName}: {count}");
         }
 
         enemyCountText.text = sb.ToString();

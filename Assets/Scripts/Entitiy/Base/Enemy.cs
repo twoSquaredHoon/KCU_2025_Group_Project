@@ -41,7 +41,7 @@ public class Enemy : MonoBehaviour, IDamageable
         rb = gameObject.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            rb.isKinematic = true;
+            rb.bodyType = RigidbodyType2D.Kinematic; ;
             rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
         }
 
@@ -90,21 +90,21 @@ public class Enemy : MonoBehaviour, IDamageable
      * 
      * @param other : 다른 유닛 collider (Team & Enemy 포함)
      */
-protected virtual void OnTriggerEnter2D(Collider2D other)
-{
-    // Enemy should only attack TEAM and PLAYER
-    if (!other.CompareTag("Team") && !other.CompareTag("Player"))
-        return;
-
-    IDamageable target = other.GetComponent<IDamageable>();
-
-    if (target != null && !opponents.Contains(target))
+    protected virtual void OnTriggerEnter2D(Collider2D other)
     {
-        opponents.Add(target);
-        setCanMove(false);
-        opponent = opponents[0];
+        // Enemy should only attack TEAM and PLAYER
+        if (!other.CompareTag("Team") && !other.CompareTag("Player"))
+            return;
+
+        IDamageable target = other.GetComponent<IDamageable>();
+
+        if (target != null && !opponents.Contains(target))
+        {
+            opponents.Add(target);
+            setCanMove(false);
+            opponent = opponents[0];
+        }
     }
-}
 
 
     /* 부딪혔던 Collider이랑 더 이상 부딪힌 상태가 아니라면 발동 됨
@@ -112,25 +112,25 @@ protected virtual void OnTriggerEnter2D(Collider2D other)
      * 
      * @param other : 다른 유닛 collider (Team & Enemy 포함)
      */
-protected virtual void OnTriggerExit2D(Collider2D other)
-{
-    IDamageable target = other.GetComponent<IDamageable>();
-    if (target == null) return;
-
-    // Remove the thing that just left our range
-    opponents.Remove(target);
-
-    if (opponents.Count > 0)
+    protected virtual void OnTriggerExit2D(Collider2D other)
     {
-        opponent = opponents[0];
-        setCanMove(false);  // still someone to fight
+        IDamageable target = other.GetComponent<IDamageable>();
+        if (target == null) return;
+
+        // Remove the thing that just left our range
+        opponents.Remove(target);
+
+        if (opponents.Count > 0)
+        {
+            opponent = opponents[0];
+            setCanMove(false);  // still someone to fight
+        }
+        else
+        {
+            opponent = null;
+            setCanMove(true);   // no one nearby, start moving again
+        }
     }
-    else
-    {
-        opponent = null;
-        setCanMove(true);   // no one nearby, start moving again
-    }
-}
 
 
     /* 
@@ -140,37 +140,38 @@ protected virtual void OnTriggerExit2D(Collider2D other)
     /* opponents 리스트 가장 첫번째 유닛 (opponent)에게 attackPower만큼 대미지를 줌.
      * 
      */
-public virtual void attack() {
-    // 1. Remove destroyed/null opponents BEFORE attacking
-    opponents.RemoveAll(o => o == null);
-
-    // 2. No opponents left? Stop attacking
-    if (opponents.Count == 0)
+    public virtual void attack()
     {
-        opponent = null;
-        setCanMove(true);
-        return;
-    }
-
-    // 3. Always use a valid opponent
-    opponent = opponents[0];
-
-    // 4. Attack safely
-    attackTimer += Time.deltaTime;
-    if (attackTimer >= attackSpeed)
-    {
-        opponent.getDamage(attackPower);
-        attackTimer = 0f;
-
+        // 1. Remove destroyed/null opponents BEFORE attacking
         opponents.RemoveAll(o => o == null);
 
+        // 2. No opponents left? Stop attacking
         if (opponents.Count == 0)
         {
             opponent = null;
             setCanMove(true);
+            return;
+        }
+
+        // 3. Always use a valid opponent
+        opponent = opponents[0];
+
+        // 4. Attack safely
+        attackTimer += Time.deltaTime;
+        if (attackTimer >= attackSpeed)
+        {
+            opponent.getDamage(attackPower);
+            attackTimer = 0f;
+
+            opponents.RemoveAll(o => o == null);
+
+            if (opponents.Count == 0)
+            {
+                opponent = null;
+                setCanMove(true);
+            }
         }
     }
-}
 
 
 
@@ -181,14 +182,14 @@ public virtual void attack() {
 
     public virtual void getDamage(float num)
     {
-           hp -= num;
+        hp -= num;
 
-    Debug.Log("Enemy took " + num + " damage.");
+        Debug.Log("Enemy took " + num + " damage.");
 
-    if (hp <= 0)
-    {
-        animateAndDestroy();
-    }
+        if (hp <= 0)
+        {
+            animateAndDestroy();
+        }
     }
 
     protected virtual void moveEntity()
@@ -198,17 +199,17 @@ public virtual void attack() {
     }
 
     protected virtual void animateAndDestroy()
-{
-    if (isDead) return;
-    isDead = true;
+    {
+        if (isDead) return;
+        isDead = true;
 
-    EntityManager.Unregister(this);
+        EntityManager.Unregister(this);
 
-    string deadName = gameObject != null ? gameObject.name : "Unknown";
-    EntityManager.addDeadListEnemy(deadName);
+        string deadName = gameObject != null ? gameObject.name : "Unknown";
+        EntityManager.addDeadListEnemy(deadName);
 
-    Destroy(gameObject);
-}
+        Destroy(gameObject);
+    }
 
 
     protected virtual bool timeToAttack()
