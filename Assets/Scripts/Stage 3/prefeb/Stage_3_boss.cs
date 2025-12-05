@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using System.Linq;
 
 public class stage_3_boss : Enemy
 {
@@ -25,9 +26,9 @@ public class stage_3_boss : Enemy
         hp = 2000f;
         attackPower = 30f;
         attackSpeed = 1f;
-        attackSpeed1 = 1000f;
-        attackSpeed2 = 10000f;
-        attackSpeed3 = 5f;
+        attackSpeed1 = 4f;
+        attackSpeed2 = 10f;
+        attackSpeed3 = 20f;
         moveSpeed = 0.3f;
         attackRange = 2f;
         isAttacking = false;
@@ -63,7 +64,7 @@ public class stage_3_boss : Enemy
 
     protected virtual void updateEnemy()
     {
-        opponentEntities = new List<GameObject>(GameObject.FindGameObjectsWithTag("Team"));
+        opponentEntities = GameObject.FindGameObjectsWithTag("Team").Concat(GameObject.FindGameObjectsWithTag("Player")).ToList();
 
         if (opponentEntities.Count > 0)
         {
@@ -101,7 +102,7 @@ public class stage_3_boss : Enemy
     {
         if (opponentEntity != null)
         {
-            opponent = opponentEntity.GetComponent<Team>();
+            opponent = opponentEntity.GetComponent<IDamageable>();
             attackTimer1 += Time.deltaTime;
             attackTimer2 += Time.deltaTime;
             attackTimer3 += Time.deltaTime;
@@ -147,7 +148,7 @@ public class stage_3_boss : Enemy
         foreach (GameObject obj in opponentEntities) {
             if (Vector3.Distance(transform.position, obj.transform.position) <= attackRange * 2f)
             {
-                opponent = obj.GetComponent<Team>();
+                opponent = obj.GetComponent<IDamageable>();
                 opponent.freeze(3f);
                 opponent.getDamage(attackPower * 1.3f);
             }
@@ -159,9 +160,9 @@ public class stage_3_boss : Enemy
         Debug.Log("Attack 3");
         foreach (GameObject obj in opponentEntities) {
             if (Vector3.Distance(transform.position, obj.transform.position) <= attackRange * 2f) {
-                opponent = obj.GetComponent<Team>();
+                opponent = obj.GetComponent<IDamageable>();
                 opponent.knockback(3f, 3f);
-                opponent.getDamage(attackPower * 0f);
+                opponent.getDamage(attackPower * 2f);
             }
         }
     }

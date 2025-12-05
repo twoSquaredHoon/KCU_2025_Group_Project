@@ -1,0 +1,1469 @@
+fileFormatVersion: 2
+guid: 019c89153056a49cab7f3d0a222772ba
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2054979543377787011
+    second: piplup_animation_0
+  - first:
+      213: 7205287305570605130
+    second: piplup_animation_1
+  - first:
+      213: -4238229637363064621
+    second: piplup_animation_2
+  - first:
+      213: 6579739940707757445
+    second: piplup_animation_3
+  - first:
+      213: 6401377162409606206
+    second: piplup_animation_4
+  - first:
+      213: 8219998844016578376
+    second: piplup_animation_5
+  - first:
+      213: -6386390933640714425
+    second: piplup_animation_6
+  - first:
+      213: -5785168764522442105
+    second: piplup_animation_7
+  - first:
+      213: 3099034912593341479
+    second: piplup_animation_8
+  - first:
+      213: 5633210564021312442
+    second: piplup_animation_9
+  - first:
+      213: -4172312020377322078
+    second: piplup_animation_10
+  - first:
+      213: 7453429354130474610
+    second: piplup_animation_11
+  - first:
+      213: 725751569338305230
+    second: piplup_animation_12
+  - first:
+      213: 6300114211262195840
+    second: piplup_animation_13
+  - first:
+      213: 8122181215563075725
+    second: piplup_animation_14
+  - first:
+      213: 3247875640178687479
+    second: piplup_animation_15
+  - first:
+      213: -1498993099210199110
+    second: piplup_animation_16
+  - first:
+      213: -8037812357970153975
+    second: piplup_animation_17
+  - first:
+      213: 6453018405603016776
+    second: piplup_animation_18
+  - first:
+      213: -8372628466656425126
+    second: piplup_animation_19
+  - first:
+      213: 3205859574003364881
+    second: piplup_animation_20
+  - first:
+      213: 5185766617517783156
+    second: piplup_animation_21
+  - first:
+      213: -1091905140469495264
+    second: piplup_animation_22
+  - first:
+      213: 4058377513705400497
+    second: piplup_animation_23
+  - first:
+      213: -5896742062473562727
+    second: piplup_animation_24
+  - first:
+      213: 5504676267466291882
+    second: piplup_animation_25
+  - first:
+      213: 2589403935763724887
+    second: piplup_animation_26
+  - first:
+      213: -2272601413423194554
+    second: piplup_animation_27
+  - first:
+      213: -4099431453227388116
+    second: piplup_animation_28
+  - first:
+      213: 2529862513401748795
+    second: piplup_animation_29
+  - first:
+      213: 7097629523661961189
+    second: piplup_animation_30
+  - first:
+      213: 1578233932885651405
+    second: piplup_animation_31
+  - first:
+      213: 5522295253426351313
+    second: piplup_animation_32
+  - first:
+      213: -5724144992016176380
+    second: piplup_animation_33
+  - first:
+      213: -6193153322597502148
+    second: piplup_animation_34
+  - first:
+      213: -6853052148163064111
+    second: piplup_animation_35
+  - first:
+      213: -7532257714801044437
+    second: piplup_animation_36
+  - first:
+      213: 621907570874327610
+    second: piplup_animation_37
+  - first:
+      213: 6004779389368787063
+    second: piplup_animation_38
+  - first:
+      213: 8297775360953250528
+    second: piplup_animation_39
+  - first:
+      213: 3203356295364966312
+    second: piplup_animation_40
+  - first:
+      213: -4564437767215963161
+    second: piplup_animation_41
+  - first:
+      213: 8021345652662535368
+    second: piplup_animation_42
+  - first:
+      213: 6531715683873576246
+    second: piplup_animation_43
+  - first:
+      213: -1050848677256045130
+    second: piplup_animation_44
+  - first:
+      213: -6999300313748890940
+    second: piplup_animation_45
+  - first:
+      213: 4404476749267585141
+    second: piplup_animation_46
+  - first:
+      213: -4185753322996672876
+    second: piplup_animation_47
+  - first:
+      213: -4730461995693196707
+    second: piplup_animation_48
+  - first:
+      213: -6668106840817504432
+    second: piplup_animation_49
+  - first:
+      213: -1574521698409191327
+    second: piplup_animation_50
+  - first:
+      213: -9211489467994485406
+    second: piplup_animation_51
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: piplup_animation_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 158
+        width: 29
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d77c5483efe3b73e0800000000000000
+      internalID: -2054979543377787011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_1
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 190
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a48da2111a25ef360800000000000000
+      internalID: 7205287305570605130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_2
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 190
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d021749998ce25c0800000000000000
+      internalID: -4238229637363064621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_3
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 191
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58de5587d9eef4b50800000000000000
+      internalID: 6579739940707757445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_4
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 159
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3cf8befc9246d850800000000000000
+      internalID: 6401377162409606206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_5
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 191
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84fcabfa56d431270800000000000000
+      internalID: 8219998844016578376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_6
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 190
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 747e19b484bfe57a0800000000000000
+      internalID: -6386390933640714425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_7
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 190
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78254f8e8a3f6bfa0800000000000000
+      internalID: -5785168764522442105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_8
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 158
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72ce8a765dbf10b20800000000000000
+      internalID: 3099034912593341479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_9
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 190
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abbd775792f2d2e40800000000000000
+      internalID: 5633210564021312442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_10
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 158
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ad3155c258f816c0800000000000000
+      internalID: -4172312020377322078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_11
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 190
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2768a63f186ef6760800000000000000
+      internalID: 7453429354130474610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_12
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 190
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eca87950533621a00800000000000000
+      internalID: 725751569338305230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_13
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 159
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0886ca6ee708e6750800000000000000
+      internalID: 6300114211262195840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_14
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 159
+        width: 24
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d80dcfa48c8c7b070800000000000000
+      internalID: 8122181215563075725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_15
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 158
+        width: 29
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fdbe7fcfa5c21d20800000000000000
+      internalID: 3247875640178687479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_16
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 161
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abf60d0e7b1823be0800000000000000
+      internalID: -1498993099210199110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90ea1ff1f34f37090800000000000000
+      internalID: -8037812357970153975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_18
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 134
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8408603ec0abd8950800000000000000
+      internalID: 6453018405603016776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_19
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 131
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5bce9805c27ecb80800000000000000
+      internalID: -8372628466656425126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_20
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 127
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11471441c408d7c20800000000000000
+      internalID: 3205859574003364881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_21
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 134
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 478f935634b87f740800000000000000
+      internalID: 5185766617517783156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_22
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 145
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02a84e55f06c8d0f0800000000000000
+      internalID: -1091905140469495264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_23
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 62
+        width: 31
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b8e7d4b8d0425830800000000000000
+      internalID: 4058377513705400497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_24
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 95
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 995b82226509a2ea0800000000000000
+      internalID: -5896742062473562727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_25
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 105
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaaf9d576e9846c40800000000000000
+      internalID: 5504676267466291882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_26
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 99
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75af13b09296fe320800000000000000
+      internalID: 2589403935763724887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_27
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 109
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64e1cd42e091670e0800000000000000
+      internalID: -2272601413423194554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_28
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 102
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c23715120d4eb17c0800000000000000
+      internalID: -4099431453227388116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_29
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 111
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3d53e95d80eb1320800000000000000
+      internalID: 2529862513401748795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_30
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 100
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e732396278df7260800000000000000
+      internalID: 7097629523661961189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_31
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 107
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcfed1e666307e510800000000000000
+      internalID: 1578233932885651405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_32
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 107
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dcad4d464223ac40800000000000000
+      internalID: 5522295253426351313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_33
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 107
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40b6b042570cf80b0800000000000000
+      internalID: -5724144992016176380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_34
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 107
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c33bb07addf7d0aa0800000000000000
+      internalID: -6193153322597502148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_35
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 62
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1de4389516115e0a0800000000000000
+      internalID: -6853052148163064111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_36
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 65
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b249698148b087790800000000000000
+      internalID: -7532257714801044437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_37
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 69
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a32271504a571a800800000000000000
+      internalID: 621907570874327610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_38
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 71
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 770e9e93a03455350800000000000000
+      internalID: 6004779389368787063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_39
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 69
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e27b9f2abe972370800000000000000
+      internalID: 8297775360953250528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_40
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 65
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a77d3a149b947c20800000000000000
+      internalID: 3203356295364966312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_41
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 41
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e327bdb80cd7a0c0800000000000000
+      internalID: -4564437767215963161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_42
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 31
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c403974f5b815f60800000000000000
+      internalID: 8021345652662535368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_43
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 52
+        width: 29
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 635d127dec055aa50800000000000000
+      internalID: 6531715683873576246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 20
+        width: 33
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bdd67712b2aa61f0800000000000000
+      internalID: -1050848677256045130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_45
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 20
+        width: 31
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ca97b2d27d7dde90800000000000000
+      internalID: -6999300313748890940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_46
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 31
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 578cf8d7448df1d30800000000000000
+      internalID: 4404476749267585141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_47
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4965f51a78739e5c0800000000000000
+      internalID: -4185753322996672876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_48
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 0
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5ab833c0e50a5eb0800000000000000
+      internalID: -4730461995693196707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_49
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 4
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05f68bc48202673a0800000000000000
+      internalID: -6668106840817504432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_50
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 2
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 168ec238bdc262ae0800000000000000
+      internalID: -1574521698409191327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piplup_animation_51
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 4
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26dcfe722273a2080800000000000000
+      internalID: -9211489467994485406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      piplup_animation_0: -2054979543377787011
+      piplup_animation_1: 7205287305570605130
+      piplup_animation_10: -4172312020377322078
+      piplup_animation_11: 7453429354130474610
+      piplup_animation_12: 725751569338305230
+      piplup_animation_13: 6300114211262195840
+      piplup_animation_14: 8122181215563075725
+      piplup_animation_15: 3247875640178687479
+      piplup_animation_16: -1498993099210199110
+      piplup_animation_17: -8037812357970153975
+      piplup_animation_18: 6453018405603016776
+      piplup_animation_19: -8372628466656425126
+      piplup_animation_2: -4238229637363064621
+      piplup_animation_20: 3205859574003364881
+      piplup_animation_21: 5185766617517783156
+      piplup_animation_22: -1091905140469495264
+      piplup_animation_23: 4058377513705400497
+      piplup_animation_24: -5896742062473562727
+      piplup_animation_25: 5504676267466291882
+      piplup_animation_26: 2589403935763724887
+      piplup_animation_27: -2272601413423194554
+      piplup_animation_28: -4099431453227388116
+      piplup_animation_29: 2529862513401748795
+      piplup_animation_3: 6579739940707757445
+      piplup_animation_30: 7097629523661961189
+      piplup_animation_31: 1578233932885651405
+      piplup_animation_32: 5522295253426351313
+      piplup_animation_33: -5724144992016176380
+      piplup_animation_34: -6193153322597502148
+      piplup_animation_35: -6853052148163064111
+      piplup_animation_36: -7532257714801044437
+      piplup_animation_37: 621907570874327610
+      piplup_animation_38: 6004779389368787063
+      piplup_animation_39: 8297775360953250528
+      piplup_animation_4: 6401377162409606206
+      piplup_animation_40: 3203356295364966312
+      piplup_animation_41: -4564437767215963161
+      piplup_animation_42: 8021345652662535368
+      piplup_animation_43: 6531715683873576246
+      piplup_animation_44: -1050848677256045130
+      piplup_animation_45: -6999300313748890940
+      piplup_animation_46: 4404476749267585141
+      piplup_animation_47: -4185753322996672876
+      piplup_animation_48: -4730461995693196707
+      piplup_animation_49: -6668106840817504432
+      piplup_animation_5: 8219998844016578376
+      piplup_animation_50: -1574521698409191327
+      piplup_animation_51: -9211489467994485406
+      piplup_animation_6: -6386390933640714425
+      piplup_animation_7: -5785168764522442105
+      piplup_animation_8: 3099034912593341479
+      piplup_animation_9: 5633210564021312442
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

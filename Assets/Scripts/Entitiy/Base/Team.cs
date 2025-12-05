@@ -7,11 +7,11 @@ using Unity.VisualScripting;
 using UnityEngine;
 using Random=UnityEngine.Random;
 
-public class Team : MonoBehaviour
+public class Team : MonoBehaviour, IDamageable
 {
     protected Rigidbody2D rb;
     protected SpriteRenderer spriteRenderer;
-    protected Enemy opponent;
+    protected IDamageable opponent;
     Animator animator;
 
     // Unit Stat (HP, 공격력, 등)
@@ -23,7 +23,7 @@ public class Team : MonoBehaviour
     [SerializeField] protected bool canMove;
     protected float stopDistance;
     protected Transform targetToStop;
-    [SerializeField] protected List<Enemy> opponents;
+    [SerializeField] protected List<IDamageable> opponents;
     [SerializeField] protected bool frozen;
     [SerializeField] protected float frozenTimer;
 
@@ -42,7 +42,7 @@ public class Team : MonoBehaviour
         attackTimer = 0f;
         canMove = true;
         stopDistance = 5f;
-        opponents = new List<Enemy>();
+        opponents = new List<IDamageable>();
         frozen = false;
         frozenTimer = 0f;
         animator = GetComponent<Animator>();
@@ -102,16 +102,17 @@ public class Team : MonoBehaviour
      */
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
-        bool isOpponent = other.CompareTag("Enemy");
-        if (isOpponent)
+        // Team should only attack ENEMY
+        if (!other.CompareTag("Enemy"))
+            return;
+
+        IDamageable target = other.GetComponent<IDamageable>();
+
+        if (target != null && !opponents.Contains(target))
         {
-            Enemy enemy = other.GetComponent<Enemy>();
-            if (enemy != null && !opponents.Contains(enemy))
-            {
-                opponents.Add(enemy);
-                setCanMove(false);
-                opponent = opponents[0];
-            }
+            opponents.Add(target);
+            setCanMove(false);
+            opponent = opponents[0];
         }
     }
 
@@ -122,10 +123,23 @@ public class Team : MonoBehaviour
      */
     protected virtual void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Enemy"))
+        if (!other.CompareTag("Enemy"))
+            return;
+
+        IDamageable target = other.GetComponent<IDamageable>();
+        if (target == null) return;
+
+        opponents.Remove(target);
+
+        if (opponents.Count > 0)
         {
-            Enemy enemy = other.GetComponent<Enemy>();
-            opponents.Remove(enemy);
+            opponent = opponents[0];
+            setCanMove(false);
+        }
+        else
+        {
+            opponent = null;
+            setCanMove(true);
         }
     }
 

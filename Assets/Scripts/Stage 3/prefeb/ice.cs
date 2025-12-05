@@ -43,16 +43,17 @@ public class ice : MonoBehaviour
 
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
-        bool isOpponent = other.CompareTag("Team");
-        if (isOpponent)
+        if (!other.CompareTag("Team") && !other.CompareTag("Player"))
         {
-            Team opponent = other.GetComponent<Team>();
-            if (opponent != null)
-            {
-                opponent.getDamage(damage);
-                opponent.freeze(0.5f);
-                Destroy(gameObject);
-            }
+            return;
+        }
+
+        IDamageable opponent = other.GetComponent<IDamageable>();
+        if (opponent != null)
+        {
+            opponent.getDamage(damage);
+            // opponent.freeze(0.5f);
+            Destroy(gameObject);
         }
     }
 }

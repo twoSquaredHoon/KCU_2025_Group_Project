@@ -6,11 +6,12 @@ using Unity.VisualScripting;
 using UnityEngine;
 using Random=UnityEngine.Random;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IDamageable
 {
     protected Rigidbody2D rb;
     protected SpriteRenderer spriteRenderer;
-    protected Team opponent;
+    protected IDamageable opponent;
+    Animator animator;
 
     // Unit Stat (HP, 공격력, 등)
     [SerializeField] protected float hp;
@@ -21,7 +22,12 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected bool canMove;
     protected float stopDistance;
     protected Transform targetToStop;
-    [SerializeField] protected List<Team> opponents;
+    [SerializeField] protected List<IDamageable> opponents;
+    [SerializeField] protected bool frozen;
+    [SerializeField] protected float frozenTimer;
+
+    private Coroutine freezeCoroutine = null;
+    private Color originalColor;
 
     protected virtual void Start()
     {
@@ -34,7 +40,7 @@ public class Enemy : MonoBehaviour
         attackTimer = 0f;
         canMove = true;
         stopDistance = 5f;
-        opponents = new List<Team>();
+        opponents = new List<IDamageable>();
 
         rb = gameObject.GetComponent<Rigidbody2D>();
         if (rb != null)
@@ -90,16 +96,18 @@ public class Enemy : MonoBehaviour
      */
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
-        bool isOpponent = other.CompareTag("Team");
-        if (isOpponent)
+        if (!other.CompareTag("Team") && !other.CompareTag("Player"))
         {
-            Team enemy = other.GetComponent<Team>();
-            if (enemy != null && !opponents.Contains(enemy))
-            {
-                opponents.Add(enemy);
-                setCanMove(false);
-                opponent = opponents[0];
-            }
+            return;
+        }
+            
+        IDamageable target = other.GetComponent<IDamageable>();
+
+        if (target != null && !opponents.Contains(target))
+        {
+            opponents.Add(target);
+            setCanMove(false);
+            opponent = opponents[0];
         }
     }
 
@@ -110,22 +118,22 @@ public class Enemy : MonoBehaviour
      */
     protected virtual void OnTriggerExit2D(Collider2D other)
     {
-        // Debug.Log(name + ": TriggerExit On!");
-        bool isOpponent = other.CompareTag("Team");
-        if (isOpponent)
+        IDamageable target = other.GetComponent<IDamageable>();
+        if (target == null) return;
+
+        // Remove the thing that just left our range
+        opponents.Remove(target);
+
+        if (opponents.Count > 0)
         {
-            if (opponents.Count > 0)
-            {
-                opponent = opponents[0];
-                setCanMove(false);
-            }
-            else
-            {
-                opponent = null;
-                setCanMove(true);
-            } 
+            opponent = opponents[0];
+            setCanMove(false);  // still someone to fight
         }
-        
+        else
+        {
+            opponent = null;
+            setCanMove(true);   // no one nearby, start moving again
+        }
     }
 
     /* 
@@ -184,6 +192,79 @@ public class Enemy : MonoBehaviour
         return !canMove;
     }
 
-    
+    public virtual void freeze(float num)
+    {
+        // 초기 originalColor 저장
+        if (originalColor == default(Color))
+            originalColor = spriteRenderer.color;
+
+        // 기존 코루틴이 있으면 중지 + 복구
+        if (freezeCoroutine != null)
+        {
+            StopCoroutine(freezeCoroutine);
+            UnfreezeState();   // 애니메이션/색 복구
+        }
+
+        // 새로운 freeze 시작
+        freezeCoroutine = StartCoroutine(freezeHelp(num));
+    }
+
+    private IEnumerator freezeHelp(float num)
+    {
+        ApplyFreezeState();
+
+        yield return new WaitForSeconds(num);
+
+        UnfreezeState();
+
+        freezeCoroutine = null;
+    }
+
+    private void ApplyFreezeState()
+    {
+        frozen = true;
+
+        if (animator != null)
+            animator.speed = 0f;
+
+        spriteRenderer.color = new Color(0f, 0.2f, 0.7f, 1f);
+    }
+
+    private void UnfreezeState()
+    {
+        frozen = false;
+
+        if (animator != null)
+            animator.speed = 1f;
+
+        spriteRenderer.color = originalColor;
+    }
+
+    public virtual void knockback(float knockbackDist, float freezeTime)
+    {
+        StopCoroutine("KnockbackCoroutine");  // avoid duplicate knockbacks
+        StartCoroutine(KnockbackCoroutine(knockbackDist, freezeTime));
+    }
+
+    private IEnumerator KnockbackCoroutine(float knockbackDist, float freezeTime)
+    {
+        float knocked = 0f;
+        float knockSpeed = 5f;  // tune this value
+
+        setCanMove(false);
+
+        while (knocked < knockbackDist)
+        {
+            knockSpeed += 0.3f;
+            float move = knockSpeed * Time.deltaTime;
+            transform.position += Vector3.left * move;
+            knocked += move;
+
+            yield return null; // wait for next frame
+        }
+
+        setCanMove(true);
+        freeze(freezeTime);
+    }
 
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using System.Linq;
 
 public class stage_3_1 : Enemy
 {
@@ -18,7 +19,7 @@ public class stage_3_1 : Enemy
     {
         base.Start();
         hp = 80f;
-        attackPower = 13f;
+        attackPower = 1f;
         attackSpeed = 1f;
         moveSpeed = 2f;
         attackRange = 8f;
@@ -61,7 +62,7 @@ public class stage_3_1 : Enemy
 
     protected virtual void updateEnemy()
     {
-        opponentEntities = new List<GameObject>(GameObject.FindGameObjectsWithTag("Team"));
+        opponentEntities = GameObject.FindGameObjectsWithTag("Team").Concat(GameObject.FindGameObjectsWithTag("Player")).ToList();
         //getEnemyList();를 활용해서 하는게 더 깔끔할 것 같음. -> 시간 남으면
 
         if (opponentEntities.Count > 0)
