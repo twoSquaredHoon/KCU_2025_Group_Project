@@ -198,18 +198,15 @@ public class Team : MonoBehaviour, IDamageable
 
     public virtual void freeze(float num)
     {
-        // 초기 originalColor 저장
         if (originalColor == default(Color))
             originalColor = spriteRenderer.color;
 
-        // 기존 코루틴이 있으면 중지 + 복구
         if (freezeCoroutine != null)
         {
             StopCoroutine(freezeCoroutine);
-            UnfreezeState();   // 애니메이션/색 복구
+            UnfreezeState();
         }
 
-        // 새로운 freeze 시작
         freezeCoroutine = StartCoroutine(freezeHelp(num));
     }
 
